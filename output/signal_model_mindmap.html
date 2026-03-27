@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>股票人气榜 · 买卖信号模型脑图</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: #0d1117;
+    color: #e6edf3;
+    min-height: 100vh;
+    overflow-x: auto;
+  }
+
+  /* ── Header ── */
+  .page-header {
+    text-align: center;
+    padding: 36px 20px 20px;
+    background: linear-gradient(180deg, #161b22 0%, transparent 100%);
+  }
+  .page-header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #58a6ff, #79c0ff, #a5d6ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+  }
+  .page-header p { color: #8b949e; font-size: .9rem; }
+
+  /* ── Legend ── */
+  .legend {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+  }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: .8rem; color: #8b949e; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; }
+
+  /* ── Mind Map Container ── */
+  .mindmap-wrap {
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px 40px 60px;
+  }
+  .mindmap {
+    min-width: 1200px;
+    position: relative;
+  }
+
+  /* ── SVG Lines ── */
+  .lines-svg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── Nodes ── */
+  .node {
+    position: absolute;
+    border-radius: 12px;
+    padding: 10px 16px;
+    font-size: .85rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s;
+    z-index: 1;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+  .node:hover { transform: scale(1.06); box-shadow: 0 0 20px rgba(88,166,255,.4); }
+
+  /* Root */
+  .node-root {
+    background: linear-gradient(135deg, #1f6feb, #388bfd);
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 16px 28px;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(56,139,253,.5);
+  }
+
+  /* Level 1 – categories */
+  .node-l1-buy    { background: linear-gradient(135deg, #b91c1c, #ef4444); color: #fff; }
+  .node-l1-sell   { background: linear-gradient(135deg, #15803d, #22c55e); color: #fff; }
+  .node-l1-rule   { background: linear-gradient(135deg, #1d4ed8, #3b82f6); color: #fff; }
+  .node-l1-ml     { background: linear-gradient(135deg, #7c3aed, #a855f7); color: #fff; }
+  .node-l1-signal { background: linear-gradient(135deg, #b45309, #f59e0b); color: #fff; }
+  .node-l1-data   { background: linear-gradient(135deg, #0e7490, #06b6d4); color: #fff; }
+
+  /* Level 2 – factors */
+  .node-l2 {
+    background: #161b22;
+    border: 1px solid #30363d;
+    color: #e6edf3;
+    font-weight: 500;
+    font-size: .8rem;
+  }
+  .node-l2-pos { border-color: #ef4444; color: #fca5a5; }
+  .node-l2-neg { border-color: #22c55e; color: #86efac; }
+  .node-l2-blue { border-color: #3b82f6; color: #93c5fd; }
+  .node-l2-purple { border-color: #a855f7; color: #d8b4fe; }
+  .node-l2-yellow { border-color: #f59e0b; color: #fde68a; }
+  .node-l2-cyan { border-color: #06b6d4; color: #a5f3fc; }
+
+  /* Level 3 – details */
+  .node-l3 {
+    background: #0d1117;
+    border: 1px solid #21262d;
+    color: #8b949e;
+    font-weight: 400;
+    font-size: .75rem;
+    border-radius: 8px;
+    padding: 6px 12px;
+  }
+  .node-l3-score { color: #fbbf24; border-color: #78350f; }
+
+  /* Score badge */
+  .score-badge {
+    display: inline-block;
+    background: rgba(251,191,36,.15);
+    border: 1px solid rgba(251,191,36,.4);
+    color: #fbbf24;
+    border-radius: 20px;
+    padding: 2px 8px;
+    font-size: .7rem;
+    margin-left: 6px;
+    font-weight: 700;
+  }
+  .score-neg { background: rgba(34,197,94,.1); border-color: rgba(34,197,94,.4); color: #4ade80; }
+
+  /* ── Signal Result Box ── */
+  .signal-result {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 0 40px 40px;
+  }
+  .signal-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+    padding: 16px 24px;
+    text-align: center;
+    min-width: 140px;
+    transition: transform .2s;
+  }
+  .signal-card:hover { transform: translateY(-3px); }
+  .signal-card .sig-name { font-size: .8rem; color: #8b949e; margin-bottom: 6px; }
+  .signal-card .sig-score { font-size: 1.4rem; font-weight: 700; }
+  .signal-card .sig-desc { font-size: .75rem; color: #8b949e; margin-top: 4px; }
+  .sig-strong-buy .sig-score { color: #ef4444; }
+  .sig-buy .sig-score { color: #f97316; }
+  .sig-hold .sig-score { color: #eab308; }
+  .sig-caution .sig-score { color: #a3a3a3; }
+  .sig-risk .sig-score { color: #22c55e; }
+
+  /* ── Flow Section ── */
+  .flow-section {
+    padding: 0 40px 60px;
+  }
+  .flow-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #58a6ff;
+    margin-bottom: 20px;
+    padding-left: 4px;
+    border-left: 3px solid #1f6feb;
+    padding-left: 12px;
+  }
+  .flow-steps {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .flow-step {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 12px 18px;
+    font-size: .82rem;
+    text-align: center;
+    min-width: 120px;
+  }
+  .flow-step .step-num { font-size: .7rem; color: #58a6ff; margin-bottom: 4px; }
+  .flow-step .step-name { font-weight: 600; }
+  .flow-step .step-sub { font-size: .7rem; color: #8b949e; margin-top: 3px; }
+  .flow-arrow { color: #30363d; font-size: 1.2rem; padding: 0 4px; }
+
+  /* ── Factor Table ── */
+  .factor-table-wrap { padding: 0 40px 60px; }
+  .factor-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .82rem;
+  }
+  .factor-table th {
+    background: #161b22;
+    color: #58a6ff;
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid #30363d;
+    font-weight: 600;
+  }
+  .factor-table td {
+    padding: 9px 14px;
+    border-bottom: 1px solid #21262d;
+    vertical-align: top;
+  }
+  .factor-table tr:hover td { background: #161b22; }
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: .7rem;
+    font-weight: 600;
+  }
+  .tag-buy { background: rgba(239,68,68,.15); color: #ef4444; }
+  .tag-sell { background: rgba(34,197,94,.15); color: #22c55e; }
+  .tag-both { background: rgba(251,191,36,.15); color: #fbbf24; }
+  .tag-ml { background: rgba(168,85,247,.15); color: #a855f7; }
+
+  /* ── Footer ── */
+  .page-footer {
+    text-align: center;
+    padding: 20px;
+    color: #484f58;
+    font-size: .78rem;
+    border-top: 1px solid #21262d;
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="page-header">
+  <h1>📊 股票人气榜 · 买卖信号模型脑图</h1>
+  <p>多因子规则模型 + 机器学习辅助 · 信号引擎 v2.0</p>
+</div>
+
+<!-- Legend -->
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#ef4444"></div>买入信号因子</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#22c55e"></div>卖出/风险因子</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#3b82f6"></div>规则模型</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#a855f7"></div>ML模型</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div>信号输出</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#06b6d4"></div>数据层</div>
+</div>
+
+<!-- Signal Result Cards -->
+<div class="signal-result">
+  <div class="signal-card sig-strong-buy">
+    <div class="sig-name">Strong Buy</div>
+    <div class="sig-score">≥ 60分</div>
+    <div class="sig-desc">强烈买入 ★★★★★</div>
+  </div>
+  <div class="signal-card sig-buy">
+    <div class="sig-name">Buy</div>
+    <div class="sig-score">40–59分</div>
+    <div class="sig-desc">买入 ★★★★</div>
+  </div>
+  <div class="signal-card sig-hold">
+    <div class="sig-name">Hold</div>
+    <div class="sig-score">20–39分</div>
+    <div class="sig-desc">观望 ★★★</div>
+  </div>
+  <div class="signal-card sig-caution">
+    <div class="sig-name">Caution</div>
+    <div class="sig-score">0–19分</div>
+    <div class="sig-desc">谨慎 ★★</div>
+  </div>
+  <div class="signal-card sig-risk">
+    <div class="sig-name">Risk</div>
+    <div class="sig-score">&lt; 0分</div>
+    <div class="sig-desc">风险提示 ★</div>
+  </div>
+</div>
+
+<!-- Factor Table -->
+<div class="factor-table-wrap">
+  <div class="flow-title">📋 全因子评分明细</div>
+  <table class="factor-table">
+    <thead>
+      <tr>
+        <th style="width:5%">#</th>
+        <th style="width:14%">因子名称</th>
+        <th style="width:10%">类型</th>
+        <th style="width:35%">评分规则</th>
+        <th style="width:12%">分值范围</th>
+        <th style="width:24%">说明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 因子1 -->
+      <tr>
+        <td style="color:#58a6ff;font-weight:700">1</td>
+        <td style="font-weight:600">人气趋势</td>
+        <td><span class="tag tag-buy">买入</span></td>
+        <td>
+          5分钟上升≥10位 <span class="score-badge">+12</span><br>
+          5分钟上升≥5位 <span class="score-badge">+6</span><br>
+          5分钟下降≥10位 <span class="score-badge score-neg">-15</span><br>
+          1小时上升≥10位 <span class="score-badge">+10</span><br>
+          1小时下降≥10位 <span class="score-badge score-neg">-10</span>
+        </td>
+        <td style="color:#fbbf24">-15 ~ +12</td>
+        <td style="color:#8b949e">东方财富股吧人气榜排名变化，反映市场关注度趋势</td>
+      </tr>
+      <!-- 因子2 -->
+      <tr>
+        <td style="color:#58a6ff;font-weight:700">2</td>
+        <td style="font-weight:600">量价配合</td>
+        <td><span class="tag tag-both">双向</span></td>
+        <td>
+          涨幅>5% + 量比>1.5 <span class="score-badge">+30</span><br>
+          涨幅>3% + 量比>1.2 <span class="score-badge">+20</span><br>
+          涨幅>0 + 量比>1 <span class="score-badge">+10</span><br>
+          跌幅>3% + 量比>1.5 <span class="score-badge score-neg">-15</span>
+        </td>
+        <td style="color:#fbbf24">-15 ~ +30</td>
+        <td style="color:#8b949e">量价关系是最核心的技术信号，放量上涨为强势，放量下跌为风险</td>
+      </tr>
+      <!-- 因子3 -->
+      <tr>
+        <td style="color:#58a6ff;font-weight:700">3</td>
+        <td style="font-weight:600">换手率风险</td>
+        <td><span class="tag tag-sell">风险</span></td>
+        <td>
+          换手率>20% <span class="score-badge score-neg">-15</span><br>
+          换手率>15% <span class="score-badge score-neg">-10</span><br>
+          换手率≤15% <span class="score-badge">0</span>
+        </td>
+        <td style="color:#fbbf24">-15 ~ 0</td>
+        <td style="color:#8b949e">换手率过高说明筹码松动，短期风险大</td>
+      </tr>
+      <!-- 因子4 -->
+      <tr>
+        <td style="color:#58a6ff;font-weight:700">4</td>
+        <td style="font-weight:600">乖离率</td>
+        <td><span class="tag tag-both">双向</span></td>
+        <td>
+          涨幅>9.5%（接近涨停）<span class="score-badge score-neg">-10</span><br>
+          涨幅>7% <span class="score-badge score-neg">-5</span><br>
+          跌幅>7%（超跌）<span class="score-badge">+15</span><br>
+          跌幅>3% <span class="score-badge">+5</span>
+        </td>
+        <td style="color:#fbbf24">-10 ~ +15</td>
+        <td style="color:#8b949e">追高风险控制 + 超跌反弹机会识别</td>
+      </tr>
+      <!-- 因子5 -->
+      <tr>
+        <td style="color:#58a6ff;font-weight:700">5</td>
+        <td style="font-weight:600">板块效应</td>
+        <td><span class="tag tag-buy">买入</span></td>
+        <td>
+          同板块≥5只上榜 <span class="score-badge">+15</span><br>
+          同板块≥3只上榜 <span class="score-badge">+10</span><br>
+          同板块≥2只上榜 <span class="score-badge">+5</span>
+        </td>
+        <td style="color:#fbbf24">0 ~ +15</td>
+        <td style="color:#8b949e">板块联动效应，多只同板块股票上榜说明板块行情启动</td>
+      </tr>
+      <!-- 因子6 -->
+      <tr>
+        <td style="color:#58a6ff;font-weight:700">6</td>
+        <td style="font-weight:600">估值风险(PE)</td>
+        <td><span class="tag tag-sell">风险</span></td>
+        <td>
+          PE<0（亏损）<span class="score-badge score-neg">-15</span><br>
+          PE>100 <span class="score-badge score-neg">-10</span><br>
+          PE>50 <span class="score-badge score-neg">-5</span><br>
+          PE合理 <span class="score-badge">0</span>
+        </td>
+        <td style="color:#fbbf24">-15 ~ 0</td>
+        <td style="color:#8b949e">高估值股票风险溢价高，亏损股需额外谨慎</td>
+      </tr>
+      <!-- 因子7 -->
+      <tr>
+        <td style="color:#58a6ff;font-weight:700">7</td>
+        <td style="font-weight:600">RSI指标</td>
+        <td><span class="tag tag-both">双向</span></td>
+        <td>
+          RSI<30（超卖）<span class="score-badge">+10</span><br>
+          RSI>70（超买）<span class="score-badge score-neg">-8</span><br>
+          30≤RSI≤70 <span class="score-badge">0</span>
+        </td>
+        <td style="color:#fbbf24">-8 ~ +10</td>
+        <td style="color:#8b949e">14日RSI，超卖区间有反弹机会，超买区间注意回调</td>
+      </tr>
+      <!-- 因子8 -->
+      <tr>
+        <td style="color:#58a6ff;font-weight:700">8</td>
+        <td style="font-weight:600">布林带位置</td>
+        <td><span class="tag tag-both">双向</span></td>
+        <td>
+          BB位置<0.2（下轨）<span class="score-badge">+8</span><br>
+          BB位置>0.8（上轨）<span class="score-badge score-neg">-6</span><br>
+          0.2≤BB≤0.8 <span class="score-badge">0</span>
+        </td>
+        <td style="color:#fbbf24">-6 ~ +8</td>
+        <td style="color:#8b949e">20日布林带，下轨附近为支撑位，上轨附近为压力位</td>
+      </tr>
+      <!-- 因子9 -->
+      <tr>
+        <td style="color:#58a6ff;font-weight:700">9</td>
+        <td style="font-weight:600">MACD</td>
+        <td><span class="tag tag-both">双向</span></td>
+        <td>
+          MACD>0（金叉区域）<span class="score-badge">+5</span><br>
+          MACD<0（死叉区域）<span class="score-badge score-neg">-3</span>
+        </td>
+        <td style="color:#fbbf24">-3 ~ +5</td>
+        <td style="color:#8b949e">12/26/9参数，DIF-DEA判断多空趋势</td>
+      </tr>
+      <!-- 因子10 -->
+      <tr>
+        <td style="color:#58a6ff;font-weight:700">10</td>
+        <td style="font-weight:600">5日均线偏离</td>
+        <td><span class="tag tag-buy">买入</span></td>
+        <td>
+          价格在5日均线±2%内 <span class="score-badge">+3</span><br>
+          偏离>2% <span class="score-badge">0</span>
+        </td>
+        <td style="color:#fbbf24">0 ~ +3</td>
+        <td style="color:#8b949e">价格回归均线附近，短期支撑有效</td>
+      </tr>
+      <!-- 因子11 -->
+      <tr>
+        <td style="color:#58a6ff;font-weight:700">11</td>
+        <td style="font-weight:600">ML模型得分</td>
+        <td><span class="tag tag-ml">ML辅助</span></td>
+        <td>
+          上涨概率→得分映射：<br>
+          概率=1.0 → 原始分+20，×15%权重 <span class="score-badge">+3</span><br>
+          概率=0.5 → 0分<br>
+          概率=0.0 → 原始分-10，×15%权重 <span class="score-badge score-neg">-1.5</span>
+        </td>
+        <td style="color:#fbbf24">-1.5 ~ +3</td>
+        <td style="color:#8b949e">随机森林分类器，权重15%（数据积累阶段），数据充足后可调高</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Sell Signal Section -->
+<div class="factor-table-wrap">
+  <div class="flow-title">🔴 卖出信号独立评分体系</div>
+
+  <!-- Sell Signal Result Cards -->
+  <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px;">
+    <div class="signal-card" style="border-color:#ef4444">
+      <div class="sig-name">强力卖出</div>
+      <div class="sig-score" style="color:#ef4444">≥ 60分</div>
+      <div class="sig-desc">●●●●● 立即止盈/止损</div>
+    </div>
+    <div class="signal-card" style="border-color:#f97316">
+      <div class="sig-name">建议卖出</div>
+      <div class="sig-score" style="color:#f97316">40–59分</div>
+      <div class="sig-desc">●●●●○ 择机卖出</div>
+    </div>
+    <div class="signal-card" style="border-color:#fbbf24">
+      <div class="sig-name">考虑减仓</div>
+      <div class="sig-score" style="color:#fbbf24">20–39分</div>
+      <div class="sig-desc">●●●○○ 部分减仓</div>
+    </div>
+    <div class="signal-card" style="border-color:#94a3b8">
+      <div class="sig-name">持有观察</div>
+      <div class="sig-score" style="color:#94a3b8">5–19分</div>
+      <div class="sig-desc">●●○○○ 密切关注</div>
+    </div>
+    <div class="signal-card" style="border-color:#4ade80">
+      <div class="sig-name">继续持有</div>
+      <div class="sig-score" style="color:#4ade80">&lt; 5分</div>
+      <div class="sig-desc">●○○○○ 安心持仓</div>
+    </div>
+  </div>
+
+  <table class="factor-table">
+    <thead>
+      <tr>
+        <th style="width:5%">#</th>
+        <th style="width:14%">卖出因子</th>
+        <th style="width:10%">类型</th>
+        <th style="width:38%">评分规则</th>
+        <th style="width:10%">分值</th>
+        <th style="width:23%">说明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="color:#ef4444;font-weight:700">1</td>
+        <td style="font-weight:600">止盈因子</td>
+        <td><span class="tag tag-sell">止盈</span></td>
+        <td>
+          盈利≥20% <span class="score-badge">+40</span><br>
+          盈利≥10% <span class="score-badge">+25</span><br>
+          盈利≥5% <span class="score-badge">+10</span>
+        </td>
+        <td style="color:#fbbf24">0 ~ +40</td>
+        <td style="color:#8b949e">达到止盈线时触发，盈利越多卖出信号越强</td>
+      </tr>
+      <tr>
+        <td style="color:#ef4444;font-weight:700">2</td>
+        <td style="font-weight:600">止损因子</td>
+        <td><span class="tag tag-sell">止损</span></td>
+        <td>
+          亏损≥10% <span class="score-badge">+45</span><br>
+          亏损≥5% <span class="score-badge">+30</span><br>
+          亏损≥3% <span class="score-badge">+15</span>
+        </td>
+        <td style="color:#fbbf24">0 ~ +45</td>
+        <td style="color:#8b949e">触发止损线，亏损越深卖出信号越强，保护本金</td>
+      </tr>
+      <tr>
+        <td style="color:#ef4444;font-weight:700">3</td>
+        <td style="font-weight:600">人气衰退</td>
+        <td><span class="tag tag-sell">趋势</span></td>
+        <td>
+          5分钟排名下降≥15位 <span class="score-badge">+20</span><br>
+          5分钟排名下降≥8位 <span class="score-badge">+10</span><br>
+          1小时排名下降≥20位 <span class="score-badge">+15</span>
+        </td>
+        <td style="color:#fbbf24">0 ~ +20</td>
+        <td style="color:#8b949e">人气榜排名快速下滑，市场关注度衰退，主力可能撤退</td>
+      </tr>
+      <tr>
+        <td style="color:#ef4444;font-weight:700">4</td>
+        <td style="font-weight:600">RSI超买</td>
+        <td><span class="tag tag-sell">技术</span></td>
+        <td>
+          RSI>80（严重超买）<span class="score-badge">+20</span><br>
+          RSI>70（超买）<span class="score-badge">+10</span>
+        </td>
+        <td style="color:#fbbf24">0 ~ +20</td>
+        <td style="color:#8b949e">RSI严重超买，短期回调概率大</td>
+      </tr>
+      <tr>
+        <td style="color:#ef4444;font-weight:700">5</td>
+        <td style="font-weight:600">布林带上轨</td>
+        <td><span class="tag tag-sell">技术</span></td>
+        <td>
+          BB位置>0.9（触及上轨）<span class="score-badge">+15</span><br>
+          BB位置>0.8（接近上轨）<span class="score-badge">+8</span>
+        </td>
+        <td style="color:#fbbf24">0 ~ +15</td>
+        <td style="color:#8b949e">价格触及布林带上轨，强压力位，回调概率高</td>
+      </tr>
+      <tr>
+        <td style="color:#ef4444;font-weight:700">6</td>
+        <td style="font-weight:600">量价背离</td>
+        <td><span class="tag tag-sell">量价</span></td>
+        <td>
+          放量下跌（量比>1.5）<span class="score-badge">+20</span><br>
+          跌幅>3% + 量比>1.2 <span class="score-badge">+12</span>
+        </td>
+        <td style="color:#fbbf24">0 ~ +20</td>
+        <td style="color:#8b949e">放量下跌是主力出货信号，需警惕</td>
+      </tr>
+      <tr>
+        <td style="color:#ef4444;font-weight:700">7</td>
+        <td style="font-weight:600">换手率异常</td>
+        <td><span class="tag tag-sell">风险</span></td>
+        <td>
+          换手率>20% + 盈利中 <span class="score-badge">+15</span><br>
+          换手率>15% + 盈利>5% <span class="score-badge">+8</span>
+        </td>
+        <td style="color:#fbbf24">0 ~ +15</td>
+        <td style="color:#8b949e">高换手率+盈利状态，筹码松动，主力可能借机出货</td>
+      </tr>
+      <tr>
+        <td style="color:#ef4444;font-weight:700">8</td>
+        <td style="font-weight:600">MACD死叉</td>
+        <td><span class="tag tag-sell">技术</span></td>
+        <td>
+          MACD<-0.05 <span class="score-badge">+8</span>
+        </td>
+        <td style="color:#fbbf24">0 ~ +8</td>
+        <td style="color:#8b949e">MACD死叉区域，趋势转弱</td>
+      </tr>
+      <tr>
+        <td style="color:#ef4444;font-weight:700">9</td>
+        <td style="font-weight:600">涨停次日风险</td>
+        <td><span class="tag tag-sell">风险</span></td>
+        <td>
+          涨幅>9.5%（接近涨停）<span class="score-badge">+10</span>
+        </td>
+        <td style="color:#fbbf24">0 ~ +10</td>
+        <td style="color:#8b949e">涨停板次日高开低走概率高，持仓需谨慎</td>
+      </tr>
+      <tr>
+        <td style="color:#ef4444;font-weight:700">10</td>
+        <td style="font-weight:600">T+1限制</td>
+        <td><span class="tag tag-both">规则</span></td>
+        <td>
+          T+1未到 <span class="score-badge score-neg">-5</span>（降低卖出得分）
+        </td>
+        <td style="color:#fbbf24">-5 ~ 0</td>
+        <td style="color:#8b949e">当日买入不可卖出，T+1规则保护，降低卖出紧迫性</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="margin-top:20px;padding:14px 18px;background:#161b22;border-radius:12px;border:1px solid #30363d;font-size:.82rem;color:#8b949e;line-height:1.8;">
+    <strong style="color:#58a6ff;">⚠️ 卖出信号说明：</strong><br>
+    • 卖出信号与买入信号<strong style="color:#e6edf3;">独立计算</strong>，专门针对持仓股票<br>
+    • 止损因子权重最高（+45），优先保护本金<br>
+    • 止盈因子次之（+40），锁定利润<br>
+    • 技术面因子辅助判断（RSI/布林带/MACD）<br>
+    • T+1限制期间卖出得分降低，但不影响止损判断<br>
+    • 所有信号仅供参考，不构成投资建议
+  </div>
+</div>
+
+<!-- Data Flow -->
+<div class="flow-section">
+  <div class="flow-title">🔄 系统数据流程</div>
+  <div class="flow-steps">
+    <div class="flow-step">
+      <div class="step-num">① 数据采集</div>
+      <div class="step-name">fetch_hot_stocks.py</div>
+      <div class="step-sub">东方财富人气榜<br>腾讯财经行情</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">
+      <div class="step-num">② 历史存储</div>
+      <div class="step-name">history_store.py</div>
+      <div class="step-sub">JSON快照<br>history_data/</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">
+      <div class="step-num">③ 技术指标</div>
+      <div class="step-name">indicators.py</div>
+      <div class="step-sub">RSI/MACD<br>布林带/均线</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">
+      <div class="step-num">④ 信号计算</div>
+      <div class="step-name">signal_engine.py</div>
+      <div class="step-sub">规则模型<br>+ML辅助</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step">
+      <div class="step-num">⑤ 页面生成</div>
+      <div class="step-name">generate_page.py</div>
+      <div class="step-sub">index.html<br>持仓管理</div>
+    </div>
+  </div>
+
+  <div style="margin-top:24px">
+    <div class="flow-title">🤖 ML模型训练流程</div>
+    <div class="flow-steps">
+      <div class="flow-step" style="border-color:#7c3aed">
+        <div class="step-num" style="color:#a855f7">① 积累数据</div>
+        <div class="step-name">history_data/</div>
+        <div class="step-sub">需≥50条样本<br>约1-2天</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step" style="border-color:#7c3aed">
+        <div class="step-num" style="color:#a855f7">② 构建数据集</div>
+        <div class="step-name">build_training_data.py</div>
+        <div class="step-sub">特征+标签<br>training_data.csv</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step" style="border-color:#7c3aed">
+        <div class="step-num" style="color:#a855f7">③ 训练模型</div>
+        <div class="step-name">train_model.py</div>
+        <div class="step-sub">RandomForest<br>stock_model.pkl</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step" style="border-color:#7c3aed">
+        <div class="step-num" style="color:#a855f7">④ 集成信号</div>
+        <div class="step-name">signal_engine.py</div>
+        <div class="step-sub">权重15%<br>辅助规则模型</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step" style="border-color:#7c3aed">
+        <div class="step-num" style="color:#a855f7">⑤ 定期更新</div>
+        <div class="step-name">每周重训</div>
+        <div class="step-sub">数据充足后<br>可调高权重</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Mind Map SVG -->
+<div class="mindmap-wrap">
+  <div class="flow-title" style="padding:0 0 16px 12px">🧠 信号因子脑图</div>
+  <div class="mindmap" style="height:820px">
+    <svg class="lines-svg" id="lines"></svg>
+
+    <!-- Root -->
+    <div class="node node-root" id="n-root" style="left:520px;top:370px">综合信号得分</div>
+
+    <!-- L1 -->
+    <div class="node node-l1-buy"    id="n-buy"    style="left:80px;top:80px">买入因子</div>
+    <div class="node node-l1-sell"   id="n-sell"   style="left:80px;top:580px">风险因子</div>
+    <div class="node node-l1-rule"   id="n-rule"   style="left:300px;top:30px">规则模型</div>
+    <div class="node node-l1-ml"     id="n-ml"     style="left:300px;top:700px">ML模型</div>
+    <div class="node node-l1-signal" id="n-signal" style="left:820px;top:370px">信号输出</div>
+    <div class="node node-l1-data"   id="n-data"   style="left:820px;top:200px">数据层</div>
+
+    <!-- Buy factors -->
+    <div class="node node-l2 node-l2-pos" id="n-rank"     style="left:20px;top:200px">人气趋势<span class="score-badge">+12</span></div>
+    <div class="node node-l2 node-l2-pos" id="n-vp"       style="left:20px;top:270px">量价配合<span class="score-badge">+30</span></div>
+    <div class="node node-l2 node-l2-pos" id="n-sector"   style="left:20px;top:340px">板块效应<span class="score-badge">+15</span></div>
+    <div class="node node-l2 node-l2-pos" id="n-oversold" style="left:20px;top:410px">超跌反弹<span class="score-badge">+15</span></div>
+
+    <!-- Risk factors -->
+    <div class="node node-l2 node-l2-neg" id="n-turnover" style="left:20px;top:500px">换手率风险<span class="score-badge score-neg">-15</span></div>
+    <div class="node node-l2 node-l2-neg" id="n-pe"       style="left:20px;top:570px">估值风险PE<span class="score-badge score-neg">-15</span></div>
+    <div class="node node-l2 node-l2-neg" id="n-overbuy"  style="left:20px;top:640px">追高风险<span class="score-badge score-neg">-10</span></div>
+
+    <!-- Technical indicators -->
+    <div class="node node-l2 node-l2-blue" id="n-rsi"  style="left:300px;top:130px">RSI指标<span class="score-badge">±10</span></div>
+    <div class="node node-l2 node-l2-blue" id="n-macd" style="left:300px;top:200px">MACD<span class="score-badge">±5</span></div>
+    <div class="node node-l2 node-l2-blue" id="n-bb"   style="left:300px;top:270px">布林带位置<span class="score-badge">±8</span></div>
+    <div class="node node-l2 node-l2-blue" id="n-ma5"  style="left:300px;top:340px">5日均线偏离<span class="score-badge">+3</span></div>
+    <div class="node node-l2 node-l2-blue" id="n-ma20" style="left:300px;top:410px">20日均线偏离<span class="score-badge">参考</span></div>
+
+    <!-- ML -->
+    <div class="node node-l2 node-l2-purple" id="n-rf"     style="left:300px;top:600px">随机森林<span class="score-badge">权重15%</span></div>
+    <div class="node node-l2 node-l2-purple" id="n-feat"   style="left:300px;top:670px">10维特征向量</div>
+    <div class="node node-l2 node-l2-purple" id="n-proba"  style="left:300px;top:740px">上涨概率[0,1]</div>
+
+    <!-- Signal output -->
+    <div class="node node-l2 node-l2-yellow" id="n-sb" style="left:960px;top:200px">Strong Buy ≥60</div>
+    <div class="node node-l2 node-l2-yellow" id="n-b"  style="left:960px;top:280px">Buy 40-59</div>
+    <div class="node node-l2 node-l2-yellow" id="n-h"  style="left:960px;top:360px">Hold 20-39</div>
+    <div class="node node-l2 node-l2-yellow" id="n-c"  style="left:960px;top:440px">Caution 0-19</div>
+    <div class="node node-l2 node-l2-yellow" id="n-r"  style="left:960px;top:520px">Risk &lt;0</div>
+
+    <!-- Data layer -->
+    <div class="node node-l2 node-l2-cyan" id="n-em"   style="left:960px;top:100px">东方财富人气榜</div>
+    <div class="node node-l2 node-l2-cyan" id="n-tq"   style="left:960px;top:60px">腾讯财经行情</div>
+    <div class="node node-l2 node-l2-cyan" id="n-hist" style="left:960px;top:140px">历史快照JSON</div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="page-footer">
+  股票人气榜系统 · 信号模型文档 · 仅供参考，不构成投资建议 · 生成时间：<span id="gen-time"></span>
+</div>
+
+<script>
+document.getElementById('gen-time').textContent = new Date().toLocaleString('zh-CN');
+
+// Draw SVG connector lines
+function getCenter(el) {
+  const r = el.getBoundingClientRect();
+  const wr = document.querySelector('.mindmap').getBoundingClientRect();
+  return {
+    x: r.left - wr.left + r.width / 2,
+    y: r.top  - wr.top  + r.height / 2,
+    left:  r.left  - wr.left,
+    right: r.left  - wr.left + r.width,
+    top:   r.top   - wr.top,
+    bottom:r.top   - wr.top  + r.height,
+  };
+}
+
+function drawLine(svg, x1, y1, x2, y2, color, dashed) {
+  const mx = (x1 + x2) / 2;
+  const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  path.setAttribute('d', `M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}`);
+  path.setAttribute('stroke', color || '#30363d');
+  path.setAttribute('stroke-width', '1.5');
+  path.setAttribute('fill', 'none');
+  path.setAttribute('opacity', '0.6');
+  if (dashed) path.setAttribute('stroke-dasharray', '5,4');
+  svg.appendChild(path);
+}
+
+window.addEventListener('load', () => {
+  const svg = document.getElementById('lines');
+  const root = document.getElementById('n-root');
+  const rc = getCenter(root);
+
+  const connections = [
+    // buy factors → root
+    ['n-rank',     '#ef4444'], ['n-vp',       '#ef4444'],
+    ['n-sector',   '#ef4444'], ['n-oversold',  '#ef4444'],
+    // risk factors → root
+    ['n-turnover', '#22c55e'], ['n-pe',        '#22c55e'],
+    ['n-overbuy',  '#22c55e'],
+    // technical → root
+    ['n-rsi',  '#3b82f6'], ['n-macd', '#3b82f6'],
+    ['n-bb',   '#3b82f6'], ['n-ma5',  '#3b82f6'],
+    ['n-ma20', '#3b82f6'],
+    // ML → root
+    ['n-rf',    '#a855f7', true], ['n-feat',  '#a855f7', true],
+    ['n-proba', '#a855f7', true],
+    // root → signal
+    ['n-sb', '#f59e0b'], ['n-b',  '#f59e0b'],
+    ['n-h',  '#f59e0b'], ['n-c',  '#f59e0b'],
+    ['n-r',  '#f59e0b'],
+    // data layer
+    ['n-em',   '#06b6d4'], ['n-tq',   '#06b6d4'],
+    ['n-hist', '#06b6d4'],
+  ];
+
+  connections.forEach(([id, color, dashed]) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const c = getCenter(el);
+    // Determine which side to connect
+    if (c.x < rc.x) {
+      drawLine(svg, c.right, c.y, rc.left, rc.y, color, dashed);
+    } else {
+      drawLine(svg, c.left, c.y, rc.right, rc.y, color, dashed);
+    }
+  });
+});
+</script>
+</body>
+</html>

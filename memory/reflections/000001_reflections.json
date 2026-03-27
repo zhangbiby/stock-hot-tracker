@@ -1,0 +1,305 @@
+[
+  {
+    "analysis_result": {
+      "stock_code": "000001",
+      "timestamp": "2026-03-27T08:54:10.601432",
+      "execution_time": 0.004848,
+      "analyst_reports": [
+        {
+          "agent_name": "FundamentalAnalyst",
+          "role": "基本面分析专家",
+          "signal": "bullish",
+          "confidence": 0.55,
+          "report": "=== 基本面分析报告 ===\n\nPE估值分析:\n  - PE比率: 8.5\n  - 估值水平: undervalued\n  - 相对行业: in_line_with_industry\n\nPB估值分析:\n  - PB比率: 0.9\n  - 估值水平: undervalued\n  - 相对行业: below_industry\n\n盈利能力:\n  - ROE: 18.5 (excellent)\n  - EPS增长率: 15.0% (moderate)",
+          "timestamp": "2026-03-27T08:54:10.598737",
+          "pe_analysis": {
+            "pe_ratio": 8.5,
+            "industry_pe": 10.0,
+            "valuation": "undervalued",
+            "signal": "bullish",
+            "confidence": 0.6,
+            "relative_valuation": "in_line_with_industry"
+          },
+          "pb_analysis": {
+            "pb_ratio": 0.9,
+            "industry_pb": 1.2,
+            "valuation": "undervalued",
+            "signal": "bullish",
+            "confidence": 0.5,
+            "relative_valuation": "below_industry"
+          },
+          "profitability": {
+            "roe": 18.5,
+            "eps_growth": 15.0,
+            "signal": "bullish",
+            "confidence": 0.55,
+            "roe_level": "excellent",
+            "eps_growth_level": "moderate"
+          }
+        },
+        {
+          "agent_name": "SentimentAnalyst",
+          "role": "市场情绪分析专家",
+          "signal": "neutral",
+          "confidence": 0,
+          "report": "分析出错: 'MemoryStore' object has no attribute 'get_ranking_changes'",
+          "timestamp": "2026-03-27T08:54:10.598119"
+        },
+        {
+          "agent_name": "NewsAnalyst",
+          "role": "新闻分析专家",
+          "signal": "neutral",
+          "confidence": 0,
+          "report": "暂无相关新闻",
+          "timestamp": "2026-03-27T08:54:10.599164",
+          "news_count": 0,
+          "relevant_news": []
+        },
+        {
+          "agent_name": "TechnicalAnalyst",
+          "role": "技术面分析专家",
+          "signal": "bullish",
+          "confidence": 0.4,
+          "report": "=== 技术分析报告 ===\n\nRSI指标: 54.55\nMACD: 0.0000, 信号线: 0.0000\n布林带: 上轨10.63, 中轨10.27, 下轨9.91\n均线: MA5=10.3, MA10=10.29, MA20=10.27\n\n综合信号: ['neutral', 'neutral', 'neutral', 'bullish']",
+          "timestamp": "2026-03-27T08:54:10.600231",
+          "indicators": {
+            "rsi": 54.55,
+            "macd": {
+              "macd": 0,
+              "signal": 0,
+              "histogram": 0
+            },
+            "bollinger": {
+              "upper": 10.63,
+              "middle": 10.27,
+              "lower": 9.91,
+              "width": 0.0693
+            },
+            "ma": {
+              "ma5": 10.3,
+              "ma10": 10.29,
+              "ma20": 10.27,
+              "ma60": null
+            },
+            "kdj": {
+              "k": 85.71,
+              "d": 85.71,
+              "j": 85.71
+            },
+            "trend": "bullish"
+          },
+          "signals_breakdown": {
+            "RSI": "neutral",
+            "MACD": "neutral",
+            "BollingerBands": "neutral",
+            "MovingAverages": "bullish"
+          }
+        }
+      ],
+      "bull_research": {
+        "agent_name": "BullResearcher",
+        "role": "看涨研究员",
+        "signal": "bullish",
+        "confidence": 0.238,
+        "report": "=== 看涨研究报告 ===\n\n看涨置信度: 24%\n看涨论据数量: 2\n\n主要看涨论据:\n  1. FundamentalAnalyst\n     置信度: 55%\n     理由: === 基本面分析报告 ===\n\nPE估值分析:\n  - PE比率: 8.5\n  - 估值水平: undervalued\n  - 相对行业: in_line_with_industry\n\nPB估值分析\n  2. TechnicalAnalyst\n     置信度: 40%\n     理由: MACD: 0.0000, 信号线: 0.0000 综合信号: ['neutral', 'neutral', 'neutral', 'bullish']",
+        "timestamp": "2026-03-27T08:54:10.600824",
+        "bullish_arguments": [
+          {
+            "source": "FundamentalAnalyst",
+            "confidence": 0.55,
+            "reasoning": "=== 基本面分析报告 ===\n\nPE估值分析:\n  - PE比率: 8.5\n  - 估值水平: undervalued\n  - 相对行业: in_line_with_industry\n\nPB估值分析",
+            "indicators": {
+              "valuation": {
+                "pe_ratio": 8.5,
+                "industry_pe": 10.0,
+                "valuation": "undervalued",
+                "signal": "bullish",
+                "confidence": 0.6,
+                "relative_valuation": "in_line_with_industry"
+              }
+            }
+          },
+          {
+            "source": "TechnicalAnalyst",
+            "confidence": 0.4,
+            "reasoning": "MACD: 0.0000, 信号线: 0.0000 综合信号: ['neutral', 'neutral', 'neutral', 'bullish']",
+            "indicators": {
+              "technical": {
+                "rsi": 54.55,
+                "macd": {
+                  "macd": 0,
+                  "signal": 0,
+                  "histogram": 0
+                },
+                "bollinger": {
+                  "upper": 10.63,
+                  "middle": 10.27,
+                  "lower": 9.91,
+                  "width": 0.0693
+                },
+                "ma": {
+                  "ma5": 10.3,
+                  "ma10": 10.29,
+                  "ma20": 10.27,
+                  "ma60": null
+                },
+                "kdj": {
+                  "k": 85.71,
+                  "d": 85.71,
+                  "j": 85.71
+                },
+                "trend": "bullish"
+              }
+            }
+          }
+        ],
+        "bullish_view": "看涨观点:\n\n1. FundamentalAnalyst (置信度: 55%)\n   === 基本面分析报告 ===\n\nPE估值分析:\n  - PE比率: 8.5\n  - 估值水平: undervalued\n  - 相对行业: in_line_with_industry\n\nPB估值分析\n2. TechnicalAnalyst (置信度: 40%)\n   MACD: 0.0000, 信号线: 0.0000 综合信号: ['neutral', 'neutral', 'neutral', 'bullish']"
+      },
+      "bear_research": {
+        "agent_name": "BearResearcher",
+        "role": "看跌研究员",
+        "signal": "bearish",
+        "confidence": 0,
+        "report": "=== 看跌研究报告 ===\n\n看跌置信度: 0%\n看跌论据数量: 0\n\n主要看跌论据:",
+        "timestamp": "2026-03-27T08:54:10.600927",
+        "bearish_arguments": [],
+        "bearish_view": "暂无看跌论据"
+      },
+      "research_decision": {
+        "agent_name": "ResearchManager",
+        "role": "研究经理",
+        "signal": "bullish",
+        "confidence": 0.238,
+        "report": "=== 研究经理决策报告 ===\n\n辩论结果:\n  看涨方置信度: 24%\n  看跌方置信度: 0%\n  辩论分数: 0.24\n  获胜方: bull\n\n最终决策:\n  信号: bullish\n  置信度: 24%\n\n投资计划:\n  行动: buy\n  仓位: small\n  时间周期: medium_term\n  目标价格: 10.95 - 11.4\n  止损位: 9.97\n  止盈位: 11.4",
+        "timestamp": "2026-03-27T08:54:10.601096",
+        "debate_result": {
+          "bull_side": {
+            "confidence": 0.238,
+            "arguments_count": 2,
+            "top_arguments": [
+              {
+                "source": "FundamentalAnalyst",
+                "confidence": 0.55,
+                "reasoning": "=== 基本面分析报告 ===\n\nPE估值分析:\n  - PE比率: 8.5\n  - 估值水平: undervalued\n  - 相对行业: in_line_with_industry\n\nPB估值分析",
+                "indicators": {
+                  "valuation": {
+                    "pe_ratio": 8.5,
+                    "industry_pe": 10.0,
+                    "valuation": "undervalued",
+                    "signal": "bullish",
+                    "confidence": 0.6,
+                    "relative_valuation": "in_line_with_industry"
+                  }
+                }
+              },
+              {
+                "source": "TechnicalAnalyst",
+                "confidence": 0.4,
+                "reasoning": "MACD: 0.0000, 信号线: 0.0000 综合信号: ['neutral', 'neutral', 'neutral', 'bullish']",
+                "indicators": {
+                  "technical": {
+                    "rsi": 54.55,
+                    "macd": {
+                      "macd": 0,
+                      "signal": 0,
+                      "histogram": 0
+                    },
+                    "bollinger": {
+                      "upper": 10.63,
+                      "middle": 10.27,
+                      "lower": 9.91,
+                      "width": 0.0693
+                    },
+                    "ma": {
+                      "ma5": 10.3,
+                      "ma10": 10.29,
+                      "ma20": 10.27,
+                      "ma60": null
+                    },
+                    "kdj": {
+                      "k": 85.71,
+                      "d": 85.71,
+                      "j": 85.71
+                    },
+                    "trend": "bullish"
+                  }
+                }
+              }
+            ]
+          },
+          "bear_side": {
+            "confidence": 0,
+            "arguments_count": 0,
+            "top_arguments": []
+          },
+          "debate_score": 0.238,
+          "winner": "bull"
+        },
+        "investment_plan": {
+          "action": "buy",
+          "target_price_range": {
+            "lower": 10.95,
+            "upper": 11.4
+          },
+          "stop_loss": 9.97,
+          "take_profit": 11.4,
+          "position_size": "small",
+          "time_horizon": "medium_term"
+        }
+      },
+      "trade_order": {
+        "agent_name": "Trader",
+        "role": "交易执行员",
+        "signal": "buy",
+        "confidence": 0.5,
+        "report": "=== 交易指令报告 ===\n\n交易指令:\n  行动: buy\n  数量: 95\n  价格: 10.5\n  置信度: 50%\n\n风险管理:\n  止损位: 9.97\n  止盈位: 11.4\n  时间周期: medium_term\n\n交易理由:\n  基于多方面分析，看好后市",
+        "timestamp": "2026-03-27T08:54:10.601292",
+        "trade_order": {
+          "action": "buy",
+          "quantity": 95,
+          "price": 10.5,
+          "confidence": 0.5,
+          "stop_loss": 9.97,
+          "take_profit": 11.4,
+          "time_horizon": "medium_term",
+          "reason": "基于多方面分析，看好后市"
+        },
+        "historical_context": {
+          "has_history": false,
+          "similar_cases": [],
+          "success_rate": 0,
+          "avg_return": 0
+        }
+      },
+      "risk_assessment": {
+        "agent_name": "RiskManager",
+        "role": "风险管理专家",
+        "signal": "bullish",
+        "confidence": 0.5,
+        "report": "=== 风险管理报告 ===\n\n风险评估:\n  风险评分: 0.10\n  风险等级: very_low\n  仓位占比: 1.00%\n  最大亏损: 5.05%\n\n风险因素:\n\n仓位调整:\n  原始数量: 95\n  调整后: 95\n  调整系数: 100%\n\n止损止盈优化:\n  止损位: 9.9\n  止盈位: 11.51",
+        "timestamp": "2026-03-27T08:54:10.601424",
+        "risk_assessment": {
+          "risk_score": 0.1,
+          "risk_level": "very_low",
+          "risk_factors": [],
+          "position_ratio": 0.009975,
+          "max_loss_ratio": 0.05047619047619042
+        },
+        "adjusted_position": {
+          "original_quantity": 95,
+          "adjusted_quantity": 95,
+          "adjustment_factor": 1.0,
+          "reason": "根据very_low风险等级调整"
+        },
+        "optimized_stops": {
+          "optimized_stop_loss": 9.9,
+          "optimized_take_profit": 11.51,
+          "volatility_adjustment": 1.125
+        }
+      },
+      "final_signal": "bullish",
+      "final_confidence": 0.5
+    },
+    "timestamp": "2026-03-27T08:54:10.602316"
+  }
+]

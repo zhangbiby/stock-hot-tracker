@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Hot Tracker - 系统思维导图</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #e8e8e8;
+            overflow-x: hidden;
+        }
+        .header {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(0,0,0,0.3);
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #00d4ff, #00ff88, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        .header .subtitle {
+            color: #888;
+            font-size: 1rem;
+        }
+        .status-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #00ff88, #00cc6a);
+            color: #000;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        /* Mind Map Container */
+        .mindmap {
+            padding: 20px;
+            overflow-x: auto;
+        }
+        .mindmap-inner {
+            display: flex;
+            justify-content: center;
+            min-width: 2000px;
+            padding: 20px;
+        }
+        
+        /* Center Node */
+        .node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .node-content {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 15px 30px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            position: relative;
+            z-index: 10;
+        }
+        .node-content:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Level 1 */
+        .level1 {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .branch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .branch::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            width: 2px;
+            height: 30px;
+            background: linear-gradient(180deg, #667eea, #764ba2);
+        }
+        .branch-title {
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            color: #000;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.3);
+        }
+        .branch-items {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        /* Level 2 Items */
+        .item {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 12px 20px;
+            min-width: 200px;
+            max-width: 250px;
+            position: relative;
+        }
+        .item::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            width: 20px;
+            height: 2px;
+            background: rgba(255,255,255,0.2);
+        }
+        .item-title {
+            font-weight: 600;
+            color: #00d4ff;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        .item-list {
+            font-size: 0.8rem;
+            color: #aaa;
+            line-height: 1.6;
+        }
+        .item-list span {
+            display: block;
+        }
+        .item-list .ok { color: #00ff88; }
+        .item-list .tag { 
+            display: inline-block;
+            background: rgba(0,212,255,0.2);
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin: 2px;
+            font-size: 0.7rem;
+        }
+        
+        /* Different colors for branches */
+        .branch-data .branch-title { background: linear-gradient(135deg, #00d4ff, #0099cc); }
+        .branch-model .branch-title { background: linear-gradient(135deg, #ff6b6b, #ee5a5a); }
+        .branch-buy .branch-title { background: linear-gradient(135deg, #4caf50, #45a049); }
+        .branch-sell .branch-title { background: linear-gradient(135deg, #ff9800, #f57c00); }
+        .branch-risk .branch-title { background: linear-gradient(135deg, #f44336, #d32f2f); }
+        .branch-ui .branch-title { background: linear-gradient(135deg, #9c27b0, #7b1fa2); }
+        
+        /* Status Panel */
+        .status-panel {
+            background: rgba(0,0,0,0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        .status-item {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        .status-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #00d4ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .status-label {
+            color: #888;
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.85rem;
+        }
+        
+        @media (max-width: 768px) {
+            .level1 { flex-wrap: wrap; }
+            .mindmap-inner { min-width: auto; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Stock Hot Tracker</h1>
+        <div class="subtitle">股票短线交易系统 - 功能思维导图</div>
+        <div class="status-badge">v4.1 运行中</div>
+    </div>
+    
+    <!-- Status Panel -->
+    <div class="status-panel">
+        <div class="status-item">
+            <div class="status-value">100</div>
+            <div class="status-label">监控股票</div>
+        </div>
+        <div class="status-item">
+            <div class="status-value">74%</div>
+            <div class="status-label">上涨比例</div>
+        </div>
+        <div class="status-item">
+            <div class="status-value">45</div>
+            <div class="status-label">涨停数量</div>
+        </div>
+        <div class="status-item">
+            <div class="status-value">71%</div>
+            <div class="status-label">ML准确率</div>
+        </div>
+    </div>
+    
+    <!-- Mind Map -->
+    <div class="mindmap">
+        <div class="mindmap-inner">
+            <div class="node">
+                <div class="node-content">
+                    Stock Hot Tracker<br>v4.1 股票短线系统
+                </div>
+                
+                <div class="level1">
+                    <!-- Data Collection -->
+                    <div class="branch branch-data">
+                        <div class="branch-title">📊 数据采集</div>
+                        <div class="branch-items">
+                            <div class="item">
+                                <div class="item-title">🌐 人气榜采集</div>
+                                <div class="item-list">
+                                    <span>东方财富股吧 Top100</span>
+                                    <span class="ok">✅ 3分钟更新</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-title">📈 实时行情</div>
+                                <div class="item-list">
+                                    <span>腾讯财经数据</span>
+                                    <span class="ok">✅ 价格/涨跌幅</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-title">🏢 大盘指数</div>
+                                <div class="item-list">
+                                    <span class="tag">上证</span>
+                                    <span class="tag">深证</span>
+                                    <span class="tag">创业板</span>
+                                    <span class="tag">科创50</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-title">📰 新闻采集</div>
+                                <div class="item-list">
+                                    <span>财联社/新浪财经</span>
+                                    <span class="ok">✅ 30分钟更新</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Model Engine -->
+                    <div class="branch branch-model">
+                        <div class="branch-title">🤖 信号引擎</div>
+                        <div class="branch-items">
+                            <div class="item">
+                                <div class="item-title">📐 规则模型</div>
+                                <div class="item-list">
+                                    <span class="tag">人气趋势 20%</span>
+                                    <span class="tag">量价配合 20%</span>
+                                    <span class="tag">技术指标 20%</span>
+                                    <span class="tag">换手率 15%</span>
+                                    <span class="tag">板块效应 15%</span>
+                                    <span class="tag">情绪 10%</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-title">🧠 ML模型</div>
+                                <div class="item-list">
+                                    <span>随机森林分类器</span>
+                                    <span class="ok">✅ 准确率 71%</span>
+                                    <span>10大特征</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-title">⚡ 动态权重</div>
+                                <div class="item-list">
+                                    <span class="tag">强牛市</span>
+                                    <span class="tag">牛市</span>
+                                    <span class="tag">震荡</span>
+                                    <span class="tag">熊市</span>
+                                    <span class="tag">强熊市</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-title">🤝 多智能体</div>
+                                <div class="item-list">
+                                    <span class="tag">技术分析师</span>
+                                    <span class="tag">情绪分析师</span>
+                                    <span class="tag">新闻分析师</span>
+                                    <span class="tag">交易员</span>
+                                    <span class="tag">风险经理</span>
+                                    <span class="ok">✅ 已启用</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Buy Signals -->
+                    <div class="branch branch-buy">
+                        <div class="branch-title">📈 买入判断</div>
+                        <div class="branch-items">
+                            <div class="item">
+                                <div class="item-title">Strong Buy</div>
+                                <div class="item-list">
+                                    <span>得分 ≥70</span>
+                                    <span class="ok">✅ 强烈建议</span>
+                                    <span>4+因子正向</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-title">Buy</div>
+                                <div class="item-list">
+                                    <span>得分 55-69</span>
+                                    <span class="ok">✅ 建议买入</span>
+                                    <span>3+因子正向</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-title">7大买入因子</div>
+                                <div class="item-list">
+                                    <span class="tag">人气上升</span>
+                                    <span class="tag">量价齐升</span>
+                                    <span class="tag">RSI超卖</span>
+                                    <span class="tag">MACD金叉</span>
+                                    <span class="tag">板块热度</span>
+                                    <span class="tag">新闻利好</span>
+                                    <span class="tag">ML高概率</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sell Signals -->
+                    <div class="branch branch-sell">
+                        <div class="branch-title">📉 卖出判断</div>
+                        <div class="branch-items">
+                            <div class="item">
+                                <div class="item-title">强力卖出</div>
+                                <div class="item-list">
+                                    <span>得分 ≥60</span>
+                                    <span class="ok">✅ 立即卖出</span>
+                                    <span>🔴 脉冲动画</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-title">建议卖出</div>
+                                <div class="item-list">
+                                    <span>得分 40-59</span>
+                                    <span class="ok">✅ 考虑减仓</span>
+                                    <span>🟠 橙色边框</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-title">7大卖出因子</div>
+                                <div class="item-list">
+                                    <span class="tag">人气下降</span>
+                                    <span class="tag">量价背离</span>
+                                    <span class="tag">RSI超买</span>
+                                    <span class="tag">MACD死叉</span>
+                                    <span class="tag">超高换手</span>
+                                    <span class="tag">止盈信号</span>
+                                    <span class="tag">ML低概率</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Risk Control -->
+                    <div class="branch branch-risk">
+                        <div class="branch-title">⚠️ 风险控制</div>
+                        <div class="branch-items">
+                            <div class="item">
+                                <div class="item-title">一票否决</div>
+                                <div class="item-list">
+                                    <span class="tag">超高换手>40%</span>
+                                    <span class="tag">连续涨停</span>
+                                    <span class="tag">业绩暴雷</span>
+                                    <span class="tag">大盘暴跌</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-title">T+1规则</div>
+                                <div class="item-list">
+                                    <span>当日买入禁止卖出</span>
+                                    <span class="ok">✅ 保护投资者</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-title">组合风控</div>
+                                <div class="item-list">
+                                    <span>单只股票<25%</span>
+                                    <span>行业集中度<20%</span>
+                                    <span class="ok">✅ 分散投资</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- UI Interface -->
+                    <div class="branch branch-ui">
+                        <div class="branch-title">🖥️ 界面展示</div>
+                        <div class="branch-items">
+                            <div class="item">
+                                <div class="item-title">买入面板</div>
+                                <div class="item-list">
+                                    <span>Top 5买入机会</span>
+                                    <span class="ok">✅ 一键买入</span>
+                                    <span>因子详情</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-title">持仓提示</div>
+                                <div class="item-list">
+                                    <span>🔴 红色脉冲卖出</span>
+                                    <span>🟠 橙色边框减仓</span>
+                                    <span>卖出进度条</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-title">信号详情</div>
+                                <div class="item-list">
+                                    <span>因子分解表格</span>
+                                    <span>ML上涨概率</span>
+                                    <span class="ok">✅ 透明化决策</span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-title">日报生成</div>
+                                <div class="item-list">
+                                    <span>微信友好格式</span>
+                                    <span>板块分析</span>
+                                    <span class="ok">✅ 一键分享</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Stock Hot Tracker v4.1 | 股票短线交易系统 | 实时数据采集 + 多维度信号分析 + 智能风控</p>
+        <p>系统运行正常 ✅ | 数据更新中 | 欢迎使用</p>
+    </div>
+</body>
+</html>

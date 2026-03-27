@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Hot Tracker - 系统文档</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0f1419; color: #e0e0e0; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .header { text-align: center; padding: 40px 0; border-bottom: 2px solid #1a2332; margin-bottom: 40px; }
+        .header h1 { font-size: 2.5rem; color: #00d4ff; margin-bottom: 10px; }
+        .header p { color: #7a8fa6; font-size: 1.1rem; }
+        .section { background: rgba(255,255,255,0.03); border-radius: 15px; padding: 30px; margin-bottom: 30px; border: 1px solid rgba(0,212,255,0.1); }
+        .section h2 { color: #00d4ff; font-size: 1.5rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .section h2::before { content: ''; width: 4px; height: 24px; background: linear-gradient(180deg, #00d4ff, #0099cc); border-radius: 2px; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .feature-card { background: rgba(0,0,0,0.2); border-radius: 12px; padding: 20px; border-left: 3px solid #00d4ff; }
+        .feature-card h3 { color: #fff; font-size: 1.1rem; margin-bottom: 10px; }
+        .feature-card p { color: #7a8fa6; font-size: 0.95rem; }
+        .feature-card .icon { font-size: 2rem; margin-bottom: 10px; }
+        .mindmap { background: rgba(0,0,0,0.2); border-radius: 12px; padding: 20px; overflow-x: auto; }
+        .mindmap-node { margin: 10px 0; padding: 10px 15px; background: rgba(0,212,255,0.1); border-radius: 8px; border-left: 3px solid #00d4ff; }
+        .mindmap-node.level-2 { margin-left: 30px; background: rgba(255,107,107,0.1); border-left-color: #ff6b6b; }
+        .mindmap-node.level-3 { margin-left: 60px; background: rgba(46,213,115,0.1); border-left-color: #2ed573; }
+        .mindmap-node.level-4 { margin-left: 90px; background: rgba(251,191,36,0.1); border-left-color: #fbbf24; }
+        .flow-diagram { display: flex; flex-direction: column; gap: 15px; }
+        .flow-step { display: flex; align-items: center; gap: 15px; padding: 15px 20px; background: rgba(0,212,255,0.05); border-radius: 10px; }
+        .flow-step .step-num { width: 30px; height: 30px; background: linear-gradient(135deg, #00d4ff, #0099cc); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #000; }
+        .flow-step .step-content { flex: 1; }
+        .flow-step .step-title { color: #fff; font-weight: 600; }
+        .flow-step .step-desc { color: #7a8fa6; font-size: 0.9rem; }
+        .arrow { text-align: center; color: #00d4ff; font-size: 1.5rem; margin: 5px 0; }
+        .signal-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        .signal-table th { background: rgba(0,212,255,0.1); padding: 12px; text-align: left; color: #00d4ff; }
+        .signal-table td { padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .signal-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+        .signal-strong-buy { background: linear-gradient(135deg, #ff4757, #ff6b6b); color: #fff; }
+        .signal-buy { background: linear-gradient(135deg, #ffa502, #ff6348); color: #fff; }
+        .signal-hold { background: linear-gradient(135deg, #747d8c, #a4b0be); color: #fff; }
+        .signal-caution { background: linear-gradient(135deg, #ff6348, #ff4757); color: #fff; }
+        .signal-risk { background: linear-gradient(135deg, #c0392b, #e74c3c); color: #fff; }
+        .agent-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .agent-item { background: rgba(0,0,0,0.2); padding: 15px; border-radius: 10px; border-left: 3px solid #6366f1; }
+        .agent-item h4 { color: #fff; margin-bottom: 5px; }
+        .agent-item p { color: #7a8fa6; font-size: 0.9rem; }
+        .footer { text-align: center; padding: 40px 0; color: #7a8fa6; border-top: 2px solid #1a2332; margin-top: 40px; }
+        .footer a { color: #00d4ff; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Stock Hot Tracker</h1>
+            <p>智能股票分析系统 - 完整功能文档与模型架构</p>
+        </div>
+
+        <!-- 系统概述 -->
+        <div class="section">
+            <h2>📋 系统概述</h2>
+            <p style="color: #7a8fa6; margin-bottom: 20px;">
+                Stock Hot Tracker 是一个基于东方财富人气榜的智能股票分析系统，结合多智能体AI分析、
+                技术指标计算和实时数据采集，为投资者提供全面的股票分析和交易建议。
+            </p>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">📊</div>
+                    <h3>实时数据采集</h3>
+                    <p>东方财富人气榜TOP100，开盘时间3分钟/次，其余时间1小时/次</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🤖</div>
+                    <h3>多智能体分析</h3>
+                    <p>11个专业AI分析师并行工作，生成多空辩论报告</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📈</div>
+                    <h3>智能信号系统</h3>
+                    <p>多因子规则模型 + 机器学习辅助，生成买卖信号</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📄</div>
+                    <h3>专业报告生成</h3>
+                    <p>日报、个股报告、多空辩论分析，一键生成</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">💼</div>
+                    <h3>持仓管理</h3>
+                    <p>支持自定义持仓，T+1交易规则，盈亏实时计算</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🌐</div>
+                    <h3>Web可视化</h3>
+                    <p>实时行情、信号统计、图表分析，响应式设计</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 系统架构 -->
+        <div class="section">
+            <h2>🏗️ 系统架构</h2>
+            <div class="mindmap">
+                <div class="mindmap-node"><strong>Stock Hot Tracker</strong> - 核心系统</div>
+                <div class="mindmap-node level-2">📡 数据采集层</div>
+                <div class="mindmap-node level-3">东方财富人气榜API</div>
+                <div class="mindmap-node level-3">腾讯财经行情API</div>
+                <div class="mindmap-node level-3">定时调度器 (3min/60min)</div>
+                <div class="mindmap-node level-2">🧠 分析引擎层</div>
+                <div class="mindmap-node level-3">传统信号引擎 (规则模型)</div>
+                <div class="mindmap-node level-3">多智能体系统 (AI分析)</div>
+                <div class="mindmap-node level-3">技术指标计算 (RSI/MACD/布林带)</div>
+                <div class="mindmap-node level-2">💾 数据存储层</div>
+                <div class="mindmap-node level-3">JSON文件存储</div>
+                <div class="mindmap-node level-3">历史数据快照</div>
+                <div class="mindmap-node level-3">记忆反思系统</div>
+                <div class="mindmap-node level-2">🖥️ 展示层</div>
+                <div class="mindmap-node level-3">Web服务器 (HTTP)</div>
+                <div class="mindmap-node level-3">HTML可视化页面</div>
+                <div class="mindmap-node level-3">报告生成系统</div>
+            </div>
+        </div>
+
+        <!-- 多智能体架构 -->
+        <div class="section">
+            <h2>🤖 多智能体分析系统</h2>
+            <p style="color: #7a8fa6; margin-bottom: 20px;">
+                采用多角色协作架构，模拟真实投研团队的工作流程
+            </p>
+            <div class="agent-list">
+                <div class="agent-item">
+                    <h4>📊 TechnicalAnalyst</h4>
+                    <p>技术分析师 - RSI、MACD、布林带、均线系统</p>
+                </div>
+                <div class="agent-item">
+                    <h4>😊 SentimentAnalyst</h4>
+                    <p>情绪分析师 - 人气排名、换手率、量比分析</p>
+                </div>
+                <div class="agent-item">
+                    <h4>📰 NewsAnalyst</h4>
+                    <p>新闻分析师 - 新闻情绪、事件驱动分析</p>
+                </div>
+                <div class="agent-item">
+                    <h4>💰 FundamentalAnalyst</h4>
+                    <p>基本面分析师 - PE/PB估值、ROE分析</p>
+                </div>
+                <div class="agent-item">
+                    <h4>🐂 BullResearcher</h4>
+                    <p>看涨研究员 - 生成看涨论据</p>
+                </div>
+                <div class="agent-item">
+                    <h4>🐻 BearResearcher</h4>
+                    <p>看跌研究员 - 生成看跌论据</p>
+                </div>
+                <div class="agent-item">
+                    <h4>👔 ResearchManager</h4>
+                    <p>研究经理 - 综合决策、生成投资计划</p>
+                </div>
+                <div class="agent-item">
+                    <h4>💼 Trader</h4>
+                    <p>交易员 - 生成交易指令、仓位管理</p>
+                </div>
+                <div class="agent-item">
+                    <h4>🛡️ RiskManager</h4>
+                    <p>风险经理 - 风险评估、止损设置</p>
+                </div>
+                <div class="agent-item">
+                    <h4>🎯 Orchestrator</h4>
+                    <p>协调器 - 调度所有智能体执行</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 分析流程 -->
+        <div class="section">
+            <h2>🔄 多智能体分析流程</h2>
+            <div class="flow-diagram">
+                <div class="flow-step">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <div class="step-title">并行分析阶段</div>
+                        <div class="step-desc">4个分析师同时工作：技术/情绪/新闻/基本面</div>
+                    </div>
+                </div>
+                <div class="arrow">↓</div>
+                <div class="flow-step">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <div class="step-title">辩论阶段</div>
+                        <div class="step-desc">看涨研究员 vs 看跌研究员，生成多空论据</div>
+                    </div>
+                </div>
+                <div class="arrow">↓</div>
+                <div class="flow-step">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <div class="step-title">综合决策</div>
+                        <div class="step-desc">研究经理整合观点，生成投资计划</div>
+                    </div>
+                </div>
+                <div class="arrow">↓</div>
+                <div class="flow-step">
+                    <div class="step-num">4</div>
+                    <div class="step-content">
+                        <div class="step-title">交易执行</div>
+                        <div class="step-desc">交易员生成具体交易指令和仓位建议</div>
+                    </div>
+                </div>
+                <div class="arrow">↓</div>
+                <div class="flow-step">
+                    <div class="step-num">5</div>
+                    <div class="step-content">
+                        <div class="step-title">风险控制</div>
+                        <div class="step-desc">风险经理评估风险，设置止损位</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 信号系统 -->
+        <div class="section">
+            <h2>📈 信号评分体系</h2>
+            <table class="signal-table">
+                <thead>
+                    <tr>
+                        <th>信号</th>
+                        <th>评分范围</th>
+                        <th>说明</th>
+                        <th>操作建议</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="signal-badge signal-strong-buy">Strong Buy</span></td>
+                        <td>≥70分</td>
+                        <td>强烈买入信号，多因子共振</td>
+                        <td>积极介入，仓位可较重</td>
+                    </tr>
+                    <tr>
+                        <td><span class="signal-badge signal-buy">Buy</span></td>
+                        <td>50-69分</td>
+                        <td>买入信号，趋势向好</td>
+                        <td>适量建仓，分批买入</td>
+                    </tr>
+                    <tr>
+                        <td><span class="signal-badge signal-hold">Hold</span></td>
+                        <td>30-49分</td>
+                        <td>持有观望，震荡整理</td>
+                        <td>持仓不动，等待方向</td>
+                    </tr>
+                    <tr>
+                        <td><span class="signal-badge signal-caution">Caution</span></td>
+                        <td>20-29分</td>
+                        <td>谨慎信号，风险增加</td>
+                        <td>减仓观望，控制仓位</td>
+                    </tr>
+                    <tr>
+                        <td><span class="signal-badge signal-risk">Risk</span></td>
+                        <td>&lt;20分</td>
+                        <td>风险信号，趋势向下</td>
+                        <td>回避或止损离场</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 买入卖出模型 -->
+        <div class="section">
+            <h2>💰 买入卖出决策模型</h2>
+            <div class="mindmap">
+                <div class="mindmap-node"><strong>买入决策模型</strong></div>
+                <div class="mindmap-node level-2">信号评分 ≥ 50分 (Buy/Strong Buy)</div>
+                <div class="mindmap-node level-2">人气排名上升 (5分钟/1小时维度)</div>
+                <div class="mindmap-node level-2">量价配合良好 (涨幅>3%, 量比>1.2)</div>
+                <div class="mindmap-node level-2">技术指标支持 (RSI<70, MACD金叉区域)</div>
+                <div class="mindmap-node level-2">板块效应 (同板块多只股票上榜)</div>
+                <div class="mindmap-node level-2">估值合理 (PE<100, 非亏损)</div>
+                <div class="mindmap-node level-3">→ 生成买入信号，建议仓位20%</div>
+                
+                <div class="mindmap-node" style="margin-top: 20px;"><strong>卖出决策模型</strong></div>
+                <div class="mindmap-node level-2">持仓盈亏评估</div>
+                <div class="mindmap-node level-3">盈利 ≥ 5%: 考虑减仓/止盈</div>
+                <div class="mindmap-node level-3">盈利 ≥ 10%: 建议卖出</div>
+                <div class="mindmap-node level-3">亏损 ≥ 3%: 触发止损</div>
+                <div class="mindmap-node level-2">信号恶化 (变为Caution/Risk)</div>
+                <div class="mindmap-node level-2">T+1规则检查 (买入后第2日可卖)</div>
+                <div class="mindmap-node level-2">换手率异常 (>20%警惕)</div>
+                <div class="mindmap-node level-3">→ 生成卖出信号，设置止损位</div>
+            </div>
+        </div>
+
+        <!-- 数据采集 -->
+        <div class="section">
+            <h2>📡 数据采集策略</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">⏰</div>
+                    <h3>开盘时间 (9:30-15:00)</h3>
+                    <p>股票数据：每3分钟采集一次<br>新闻数据：每10分钟采集一次</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🌙</div>
+                    <h3>非交易时间</h3>
+                    <p>股票数据：每1小时采集一次<br>新闻数据：每1小时采集一次</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📊</div>
+                    <h3>数据来源</h3>
+                    <p>东方财富人气榜API<br>腾讯财经行情API</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">💾</div>
+                    <h3>数据存储</h3>
+                    <p>JSON文件格式<br>历史数据快照</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 使用指南 -->
+        <div class="section">
+            <h2>🚀 快速使用指南</h2>
+            <div class="flow-diagram">
+                <div class="flow-step">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <div class="step-title">启动服务器</div>
+                        <div class="step-desc">python server.py → 访问 http://localhost:8080</div>
+                    </div>
+                </div>
+                <div class="flow-step">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <div class="step-title">查看实时数据</div>
+                        <div class="step-desc">大盘指数、人气榜TOP100、信号统计</div>
+                    </div>
+                </div>
+                <div class="flow-step">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <div class="step-title">生成个股报告</div>
+                        <div class="step-desc">点击股票行右侧 "📊" 按钮，查看多空辩论分析</div>
+                    </div>
+                </div>
+                <div class="flow-step">
+                    <div class="step-num">4</div>
+                    <div class="step-content">
+                        <div class="step-title">生成日报</div>
+                        <div class="step-desc">点击 "📄 生成日报" 按钮，获取完整市场分析</div>
+                    </div>
+                </div>
+                <div class="flow-step">
+                    <div class="step-num">5</div>
+                    <div class="step-content">
+                        <div class="step-title">管理持仓</div>
+                        <div class="step-desc">添加自定义持仓，实时计算盈亏和T+1状态</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Stock Hot Tracker - 智能股票分析系统</p>
+            <p>数据来源：东方财富 | 腾讯财经</p>
+            <p style="margin-top: 10px;"><a href="http://localhost:8080">访问系统 →</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+[
+  {
+    "stock_code": "000001",
+    "timestamp": "2026-03-27T08:54:10.601503",
+    "signal": "bullish",
+    "confidence": 0.5,
+    "action": "buy",
+    "target_price": {
+      "lower": 10.95,
+      "upper": 11.4
+    },
+    "entry_price": 10.5
+  }
+]

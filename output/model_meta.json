@@ -1,0 +1,20 @@
+{
+  "train_time": "2026-03-27 15:06:50",
+  "samples": 500,
+  "train_size": 400,
+  "test_size": 100,
+  "accuracy": 0.71,
+  "feature_cols": [
+    "rank",
+    "change_pct",
+    "turnover_rate",
+    "volume_ratio",
+    "amplitude",
+    "rsi",
+    "macd",
+    "bb_position",
+    "ma5_diff",
+    "ma20_diff"
+  ],
+  "model_type": "RandomForestClassifier"
+}

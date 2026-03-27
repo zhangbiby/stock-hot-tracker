@@ -1,0 +1,6629 @@
+{
+  "update_time": "2026-03-27 16:24:44",
+  "signals": [
+    {
+      "code": "000539",
+      "name": "粤电力Ａ",
+      "rank": 61,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 15,
+      "reasons": [
+        "乖离: 可能超跌反弹",
+        "模型预测上涨概率52%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率9.1%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 15,
+          "reason": "可能超跌反弹"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率52%"
+        }
+      ],
+      "price": 6.94,
+      "change_pct": -7.34,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.5186,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600032",
+      "name": "浙江新能",
+      "rank": 78,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 15,
+      "reasons": [
+        "乖离: 可能超跌反弹",
+        "模型预测上涨概率51%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率5.7%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 15,
+          "reason": "可能超跌反弹"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率51%"
+        }
+      ],
+      "price": 11.71,
+      "change_pct": -7.14,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.5071,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "601016",
+      "name": "节能风电",
+      "rank": 12,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 10,
+      "reasons": [
+        "乖离: 可能超跌反弹",
+        "MACD金叉区域",
+        "模型预测上涨概率62%"
+      ],
+      "risks": [
+        "换手率15.0%，活跃度高"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -10,
+          "reason": "换手率15.0%，活跃度高"
+        },
+        {
+          "name": "乖离率",
+          "score": 15,
+          "reason": "可能超跌反弹"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 5,
+          "reason": "MACD金叉区域"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率62%"
+        }
+      ],
+      "price": 4.93,
+      "change_pct": -7.16,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6168,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600163",
+      "name": "中闽能源",
+      "rank": 48,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 5,
+      "reasons": [
+        "乖离: 回调中",
+        "模型预测上涨概率54%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率14.0%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 5,
+          "reason": "回调中"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率54%"
+        }
+      ],
+      "price": 7.83,
+      "change_pct": -5.55,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.535,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600758",
+      "name": "辽宁能源",
+      "rank": 65,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 5,
+      "reasons": [
+        "乖离: 可能超跌反弹",
+        "模型预测上涨概率50%"
+      ],
+      "risks": [
+        "换手率17.5%，活跃度高"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -10,
+          "reason": "换手率17.5%，活跃度高"
+        },
+        {
+          "name": "乖离率",
+          "score": 15,
+          "reason": "可能超跌反弹"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率50%"
+        }
+      ],
+      "price": 5.53,
+      "change_pct": -9.93,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.4977,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002015",
+      "name": "协鑫能科",
+      "rank": 95,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 5,
+      "reasons": [
+        "乖离: 回调中",
+        "模型预测上涨概率54%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率10.8%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 5,
+          "reason": "回调中"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率54%"
+        }
+      ],
+      "price": 17.76,
+      "change_pct": -4.57,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.5394,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600726",
+      "name": "华电能源",
+      "rank": 7,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 1,
+      "reasons": [
+        "模型预测上涨概率75%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率6.7%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 1,
+          "reason": "模型预测上涨概率75%"
+        }
+      ],
+      "price": 6.68,
+      "change_pct": -1.33,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.7547,
+      "ml_score": 1,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002309",
+      "name": "中利集团",
+      "rank": 22,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 1,
+      "reasons": [
+        "乖离: 可能超跌反弹",
+        "模型预测上涨概率76%"
+      ],
+      "risks": [
+        "换手率35.5%，极度活跃"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -15,
+          "reason": "换手率35.5%，极度活跃"
+        },
+        {
+          "name": "乖离率",
+          "score": 15,
+          "reason": "可能超跌反弹"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 1,
+          "reason": "模型预测上涨概率76%"
+        }
+      ],
+      "price": 4.33,
+      "change_pct": -8.65,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.7552,
+      "ml_score": 1,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600276",
+      "name": "恒瑞医药",
+      "rank": 23,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 1,
+      "reasons": [
+        "模型预测上涨概率68%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率1.6%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 1,
+          "reason": "模型预测上涨概率68%"
+        }
+      ],
+      "price": 55.18,
+      "change_pct": 6.88,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6838,
+      "ml_score": 1,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002466",
+      "name": "天齐锂业",
+      "rank": 39,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 1,
+      "reasons": [
+        "模型预测上涨概率68%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率6.9%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 1,
+          "reason": "模型预测上涨概率68%"
+        }
+      ],
+      "price": 57.96,
+      "change_pct": 6.94,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6797,
+      "ml_score": 1,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002131",
+      "name": "利欧股份",
+      "rank": 19,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率65%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率9.8%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率65%"
+        }
+      ],
+      "price": 7.74,
+      "change_pct": 3.06,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6512,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "000547",
+      "name": "航天发展",
+      "rank": 26,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率56%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率11.2%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率56%"
+        }
+      ],
+      "price": 27.36,
+      "change_pct": -2.81,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.5557,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002506",
+      "name": "协鑫集成",
+      "rank": 32,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率55%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率10.4%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率55%"
+        }
+      ],
+      "price": 5.33,
+      "change_pct": -1.3,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.553,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "000988",
+      "name": "华工科技",
+      "rank": 37,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率66%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率9.8%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率66%"
+        }
+      ],
+      "price": 109.5,
+      "change_pct": 3.94,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6607,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "000617",
+      "name": "中油资本",
+      "rank": 40,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率66%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率3.0%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率66%"
+        }
+      ],
+      "price": 10.64,
+      "change_pct": 3.91,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6607,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600759",
+      "name": "洲际油气",
+      "rank": 41,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率53%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率12.8%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率53%"
+        }
+      ],
+      "price": 6.17,
+      "change_pct": -0.32,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.53,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "300059",
+      "name": "东方财富",
+      "rank": 45,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率53%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率1.4%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率53%"
+        }
+      ],
+      "price": 19.21,
+      "change_pct": 0.47,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.5255,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002594",
+      "name": "比亚迪",
+      "rank": 47,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率53%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率1.9%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率53%"
+        }
+      ],
+      "price": 105.3,
+      "change_pct": 2.09,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.5295,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "000722",
+      "name": "湖南发展",
+      "rank": 49,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "乖离: 可能超跌反弹",
+        "模型预测上涨概率59%"
+      ],
+      "risks": [
+        "换手率26.1%，极度活跃"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -15,
+          "reason": "换手率26.1%，极度活跃"
+        },
+        {
+          "name": "乖离率",
+          "score": 15,
+          "reason": "可能超跌反弹"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率59%"
+        }
+      ],
+      "price": 16.96,
+      "change_pct": -7.22,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.5912,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "601868",
+      "name": "中国能建",
+      "rank": 54,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率53%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率3.1%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率53%"
+        }
+      ],
+      "price": 3.1,
+      "change_pct": -2.52,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.5333,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002202",
+      "name": "金风科技",
+      "rank": 59,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率53%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率4.4%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率53%"
+        }
+      ],
+      "price": 27.45,
+      "change_pct": -2.42,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.5313,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "601899",
+      "name": "紫金矿业",
+      "rank": 62,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率51%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率1.1%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率51%"
+        }
+      ],
+      "price": 32.47,
+      "change_pct": 1.18,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.5067,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002261",
+      "name": "拓维信息",
+      "rank": 66,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率61%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率7.5%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率61%"
+        }
+      ],
+      "price": 34.73,
+      "change_pct": 3.21,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6131,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002475",
+      "name": "立讯精密",
+      "rank": 67,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率50%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率2.4%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率50%"
+        }
+      ],
+      "price": 50.61,
+      "change_pct": 0.84,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.4978,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "601606",
+      "name": "长城军工",
+      "rank": 68,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率61%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率6.5%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率61%"
+        }
+      ],
+      "price": 42.83,
+      "change_pct": 3.6,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6071,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "601869",
+      "name": "长飞光纤",
+      "rank": 72,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率49%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率5.1%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率49%"
+        }
+      ],
+      "price": 274.26,
+      "change_pct": 2.0,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.4905,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600703",
+      "name": "三安光电",
+      "rank": 75,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率51%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率4.5%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率51%"
+        }
+      ],
+      "price": 12.56,
+      "change_pct": -2.71,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.5076,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "300750",
+      "name": "宁德时代",
+      "rank": 77,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率61%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率0.7%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率61%"
+        }
+      ],
+      "price": 416.18,
+      "change_pct": 3.4,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6129,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002709",
+      "name": "天赐材料",
+      "rank": 81,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率60%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率9.4%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率60%"
+        }
+      ],
+      "price": 46.11,
+      "change_pct": 3.64,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.602,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "000592",
+      "name": "平潭发展",
+      "rank": 83,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率49%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率8.5%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率49%"
+        }
+      ],
+      "price": 10.56,
+      "change_pct": -1.22,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.4918,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600487",
+      "name": "亨通光电",
+      "rank": 88,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率51%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率5.7%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率51%"
+        }
+      ],
+      "price": 48.95,
+      "change_pct": 2.23,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.5091,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600089",
+      "name": "特变电工",
+      "rank": 97,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率50%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率1.9%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率50%"
+        }
+      ],
+      "price": 28.25,
+      "change_pct": -0.25,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.4965,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600410",
+      "name": "华胜天成",
+      "rank": 98,
+      "signal": "Caution",
+      "strength": 2,
+      "score": 0,
+      "reasons": [
+        "模型预测上涨概率50%"
+      ],
+      "risks": [],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率8.4%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率50%"
+        }
+      ],
+      "price": 24.8,
+      "change_pct": 0.94,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.496,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议谨慎，信号偏弱，注意风险控制",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "601908",
+      "name": "京运通",
+      "rank": 20,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -5,
+      "reasons": [
+        "乖离: 回调中",
+        "模型预测上涨概率56%"
+      ],
+      "risks": [
+        "换手率18.2%，活跃度高"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -10,
+          "reason": "换手率18.2%，活跃度高"
+        },
+        {
+          "name": "乖离率",
+          "score": 5,
+          "reason": "回调中"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率56%"
+        }
+      ],
+      "price": 4.84,
+      "change_pct": -3.78,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.5584,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "300620",
+      "name": "光库科技",
+      "rank": 70,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -5,
+      "reasons": [
+        "乖离: 涨幅较大",
+        "模型预测上涨概率63%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率11.3%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -5,
+          "reason": "涨幅较大"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率63%"
+        }
+      ],
+      "price": 194.47,
+      "change_pct": 8.59,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6334,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600930",
+      "name": "华电新能",
+      "rank": 79,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -5,
+      "reasons": [
+        "乖离: 回调中",
+        "模型预测上涨概率47%"
+      ],
+      "risks": [
+        "换手率18.2%，活跃度高"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -10,
+          "reason": "换手率18.2%，活跃度高"
+        },
+        {
+          "name": "乖离率",
+          "score": 5,
+          "reason": "回调中"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率47%"
+        }
+      ],
+      "price": 6.78,
+      "change_pct": -6.22,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.4744,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002969",
+      "name": "嘉美包装",
+      "rank": 86,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -5,
+      "reasons": [
+        "乖离: 涨幅较大",
+        "模型预测上涨概率65%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率6.7%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -5,
+          "reason": "涨幅较大"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率65%"
+        }
+      ],
+      "price": 24.99,
+      "change_pct": 8.65,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6523,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "000792",
+      "name": "盐湖股份",
+      "rank": 90,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -5,
+      "reasons": [
+        "乖离: 涨幅较大",
+        "模型预测上涨概率66%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率3.0%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -5,
+          "reason": "涨幅较大"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率66%"
+        }
+      ],
+      "price": 39.45,
+      "change_pct": 7.06,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6576,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002549",
+      "name": "凯美特气",
+      "rank": 94,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -5,
+      "reasons": [
+        "乖离: 涨幅较大",
+        "模型预测上涨概率64%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率11.9%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -5,
+          "reason": "涨幅较大"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率64%"
+        }
+      ],
+      "price": 19.39,
+      "change_pct": 7.36,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6372,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002460",
+      "name": "赣锋锂业",
+      "rank": 4,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -9,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率76%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率10.9%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 1,
+          "reason": "模型预测上涨概率76%"
+        }
+      ],
+      "price": 79.67,
+      "change_pct": 10.0,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.7579,
+      "ml_score": 1,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600310",
+      "name": "广西能源",
+      "rank": 5,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -9,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率76%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率2.9%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 1,
+          "reason": "模型预测上涨概率76%"
+        }
+      ],
+      "price": 6.6,
+      "change_pct": 10.0,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.7579,
+      "ml_score": 1,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002310",
+      "name": "东方新能",
+      "rank": 8,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -9,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率75%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率13.1%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 1,
+          "reason": "模型预测上涨概率75%"
+        }
+      ],
+      "price": 3.84,
+      "change_pct": 10.03,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.7525,
+      "ml_score": 1,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "001896",
+      "name": "豫能控股",
+      "rank": 9,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -9,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率76%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率14.8%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 1,
+          "reason": "模型预测上涨概率76%"
+        }
+      ],
+      "price": 16.54,
+      "change_pct": 9.97,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.7569,
+      "ml_score": 1,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "603538",
+      "name": "美诺华",
+      "rank": 13,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率64%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率9.8%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率64%"
+        }
+      ],
+      "price": 39.18,
+      "change_pct": 9.99,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.64,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002428",
+      "name": "云南锗业",
+      "rank": 14,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率64%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率12.2%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率64%"
+        }
+      ],
+      "price": 51.36,
+      "change_pct": 10.0,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6394,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "300204",
+      "name": "舒泰神",
+      "rank": 15,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率65%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率12.3%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率65%"
+        }
+      ],
+      "price": 27.76,
+      "change_pct": 20.02,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6495,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002470",
+      "name": "金正大",
+      "rank": 17,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率66%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率8.4%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率66%"
+        }
+      ],
+      "price": 3.09,
+      "change_pct": 9.96,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6566,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "603618",
+      "name": "杭电股份",
+      "rank": 21,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率65%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率12.2%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率65%"
+        }
+      ],
+      "price": 24.28,
+      "change_pct": 10.01,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.65,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002240",
+      "name": "盛新锂能",
+      "rank": 24,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率66%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率6.1%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率66%"
+        }
+      ],
+      "price": 42.23,
+      "change_pct": 10.0,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6589,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002176",
+      "name": "江特电机",
+      "rank": 27,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率66%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率5.5%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率66%"
+        }
+      ],
+      "price": 10.29,
+      "change_pct": 10.05,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6589,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "603026",
+      "name": "石大胜华",
+      "rank": 31,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率66%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率13.8%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率66%"
+        }
+      ],
+      "price": 93.85,
+      "change_pct": 10.0,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6573,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600821",
+      "name": "金开新能",
+      "rank": 34,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 回调中",
+        "模型预测上涨概率60%"
+      ],
+      "risks": [
+        "换手率22.4%，极度活跃"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -15,
+          "reason": "换手率22.4%，极度活跃"
+        },
+        {
+          "name": "乖离率",
+          "score": 5,
+          "reason": "回调中"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率60%"
+        }
+      ],
+      "price": 10.08,
+      "change_pct": -3.45,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.598,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "000720",
+      "name": "新能泰山",
+      "rank": 36,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率66%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率10.6%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率66%"
+        }
+      ],
+      "price": 5.51,
+      "change_pct": 9.98,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6589,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002082",
+      "name": "万邦德",
+      "rank": 42,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率66%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率5.1%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率66%"
+        }
+      ],
+      "price": 26.04,
+      "change_pct": 10.01,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6589,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600844",
+      "name": "金煤科技",
+      "rank": 43,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率66%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率11.8%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率66%"
+        }
+      ],
+      "price": 4.99,
+      "change_pct": 9.91,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6568,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600110",
+      "name": "诺德股份",
+      "rank": 44,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率65%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率10.2%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率65%"
+        }
+      ],
+      "price": 8.66,
+      "change_pct": 10.04,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6491,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002038",
+      "name": "双鹭药业",
+      "rank": 46,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率64%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率6.8%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率64%"
+        }
+      ],
+      "price": 6.61,
+      "change_pct": 9.98,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6413,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "000155",
+      "name": "川能动力",
+      "rank": 51,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率64%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率5.8%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率64%"
+        }
+      ],
+      "price": 16.16,
+      "change_pct": 10.01,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6413,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "000815",
+      "name": "美利云",
+      "rank": 53,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "模型预测上涨概率51%"
+      ],
+      "risks": [
+        "换手率19.5%，活跃度高"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -10,
+          "reason": "换手率19.5%，活跃度高"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率51%"
+        }
+      ],
+      "price": 20.29,
+      "change_pct": 0.84,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.5126,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600268",
+      "name": "国电南自",
+      "rank": 55,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率64%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率5.3%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率64%"
+        }
+      ],
+      "price": 14.99,
+      "change_pct": 9.98,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6413,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002455",
+      "name": "百川股份",
+      "rank": 56,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率63%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率14.7%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率63%"
+        }
+      ],
+      "price": 14.41,
+      "change_pct": 10.0,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6336,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600513",
+      "name": "联环药业",
+      "rank": 57,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率64%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率9.3%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率64%"
+        }
+      ],
+      "price": 25.61,
+      "change_pct": 10.01,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6413,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002432",
+      "name": "九安医疗",
+      "rank": 58,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率63%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率11.2%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率63%"
+        }
+      ],
+      "price": 68.64,
+      "change_pct": 10.0,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6308,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002756",
+      "name": "永兴材料",
+      "rank": 60,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率64%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率5.8%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率64%"
+        }
+      ],
+      "price": 81.21,
+      "change_pct": 10.0,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6393,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "603778",
+      "name": "国晟科技",
+      "rank": 63,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "模型预测上涨概率61%"
+      ],
+      "risks": [
+        "换手率15.0%，活跃度高"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -10,
+          "reason": "换手率15.0%，活跃度高"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率61%"
+        }
+      ],
+      "price": 23.0,
+      "change_pct": 4.12,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6072,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600996",
+      "name": "贵广网络",
+      "rank": 64,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率62%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率1.3%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率62%"
+        }
+      ],
+      "price": 10.02,
+      "change_pct": 9.99,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6211,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "000968",
+      "name": "蓝焰控股",
+      "rank": 71,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "模型预测上涨概率64%"
+      ],
+      "risks": [
+        "换手率15.8%，活跃度高"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -10,
+          "reason": "换手率15.8%，活跃度高"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率64%"
+        }
+      ],
+      "price": 11.57,
+      "change_pct": 5.86,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6379,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002842",
+      "name": "翔鹭钨业",
+      "rank": 73,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率61%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率13.4%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率61%"
+        }
+      ],
+      "price": 33.13,
+      "change_pct": 9.99,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6119,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "300390",
+      "name": "天华新能",
+      "rank": 74,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率61%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率10.4%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率61%"
+        }
+      ],
+      "price": 64.01,
+      "change_pct": 12.99,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6126,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "603399",
+      "name": "永杉锂业",
+      "rank": 76,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率62%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率9.3%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率62%"
+        }
+      ],
+      "price": 11.72,
+      "change_pct": 10.05,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6162,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002565",
+      "name": "顺灏股份",
+      "rank": 80,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "模型预测上涨概率46%"
+      ],
+      "risks": [
+        "换手率19.3%，活跃度高"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -10,
+          "reason": "换手率19.3%，活跃度高"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率46%"
+        }
+      ],
+      "price": 15.28,
+      "change_pct": 1.19,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.4572,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "300858",
+      "name": "科拓生物",
+      "rank": 84,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率63%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率7.8%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率63%"
+        }
+      ],
+      "price": 18.19,
+      "change_pct": 19.99,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6336,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "000601",
+      "name": "韶能股份",
+      "rank": 85,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 回调中",
+        "模型预测上涨概率55%"
+      ],
+      "risks": [
+        "换手率24.2%，极度活跃"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -15,
+          "reason": "换手率24.2%，极度活跃"
+        },
+        {
+          "name": "乖离率",
+          "score": 5,
+          "reason": "回调中"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率55%"
+        }
+      ],
+      "price": 7.8,
+      "change_pct": -3.35,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.5523,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "603127",
+      "name": "昭衍新药",
+      "rank": 89,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率64%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率3.2%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率64%"
+        }
+      ],
+      "price": 30.24,
+      "change_pct": 10.0,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6368,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "603738",
+      "name": "泰晶科技",
+      "rank": 91,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率63%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率10.8%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率63%"
+        }
+      ],
+      "price": 26.19,
+      "change_pct": 10.0,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6292,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600338",
+      "name": "西藏珠峰",
+      "rank": 92,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率63%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率11.4%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率63%"
+        }
+      ],
+      "price": 17.48,
+      "change_pct": 10.01,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6251,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002265",
+      "name": "建设工业",
+      "rank": 93,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率63%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率2.2%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率63%"
+        }
+      ],
+      "price": 25.03,
+      "change_pct": 10.02,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.627,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "000822",
+      "name": "山东海化",
+      "rank": 96,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率63%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率8.4%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率63%"
+        }
+      ],
+      "price": 6.45,
+      "change_pct": 10.07,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6251,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002491",
+      "name": "通鼎互联",
+      "rank": 99,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "模型预测上涨概率59%"
+      ],
+      "risks": [
+        "换手率16.6%，活跃度高"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -10,
+          "reason": "换手率16.6%，活跃度高"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率59%"
+        }
+      ],
+      "price": 11.22,
+      "change_pct": 3.31,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.5935,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002272",
+      "name": "川润股份",
+      "rank": 100,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -10,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率61%"
+      ],
+      "risks": [
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": 0,
+          "reason": "换手率12.5%，正常"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率61%"
+        }
+      ],
+      "price": 17.66,
+      "change_pct": 10.03,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6147,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002149",
+      "name": "西部材料",
+      "rank": 11,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -14,
+      "reasons": [
+        "模型预测上涨概率81%"
+      ],
+      "risks": [
+        "换手率25.1%，极度活跃"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -15,
+          "reason": "换手率25.1%，极度活跃"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 1,
+          "reason": "模型预测上涨概率81%"
+        }
+      ],
+      "price": 49.45,
+      "change_pct": 5.8,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.8082,
+      "ml_score": 1,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002902",
+      "name": "铭普光磁",
+      "rank": 69,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -14,
+      "reasons": [
+        "模型预测上涨概率74%"
+      ],
+      "risks": [
+        "换手率48.6%，极度活跃"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -15,
+          "reason": "换手率48.6%，极度活跃"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 1,
+          "reason": "模型预测上涨概率74%"
+        }
+      ],
+      "price": 27.94,
+      "change_pct": -2.14,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.7353,
+      "ml_score": 1,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "000037",
+      "name": "深南电A",
+      "rank": 87,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -14,
+      "reasons": [
+        "模型预测上涨概率69%"
+      ],
+      "risks": [
+        "换手率31.5%，极度活跃"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -15,
+          "reason": "换手率31.5%，极度活跃"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 1,
+          "reason": "模型预测上涨概率69%"
+        }
+      ],
+      "price": 12.4,
+      "change_pct": 3.42,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6946,
+      "ml_score": 1,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "603601",
+      "name": "再升科技",
+      "rank": 16,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -15,
+      "reasons": [
+        "模型预测上涨概率66%"
+      ],
+      "risks": [
+        "换手率29.1%，极度活跃"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -15,
+          "reason": "换手率29.1%，极度活跃"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率66%"
+        }
+      ],
+      "price": 13.18,
+      "change_pct": -1.93,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6633,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002471",
+      "name": "中超控股",
+      "rank": 18,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -15,
+      "reasons": [
+        "模型预测上涨概率58%"
+      ],
+      "risks": [
+        "换手率22.9%，极度活跃"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -15,
+          "reason": "换手率22.9%，极度活跃"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率58%"
+        }
+      ],
+      "price": 8.9,
+      "change_pct": 1.6,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.5841,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600722",
+      "name": "金牛化工",
+      "rank": 35,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -15,
+      "reasons": [
+        "模型预测上涨概率57%"
+      ],
+      "risks": [
+        "换手率22.7%，极度活跃"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -15,
+          "reason": "换手率22.7%，极度活跃"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率57%"
+        }
+      ],
+      "price": 17.55,
+      "change_pct": -1.68,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.5732,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600396",
+      "name": "华电辽能",
+      "rank": 1,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -17,
+      "reasons": [
+        "MACD死叉区域",
+        "模型预测上涨概率80%"
+      ],
+      "risks": [
+        "换手率25.5%，极度活跃"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -15,
+          "reason": "换手率25.5%，极度活跃"
+        },
+        {
+          "name": "乖离率",
+          "score": 0,
+          "reason": "正常区间"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": -3,
+          "reason": "MACD死叉区域"
+        },
+        {
+          "name": "ML模型",
+          "score": 1,
+          "reason": "模型预测上涨概率80%"
+        }
+      ],
+      "price": 8.99,
+      "change_pct": 1.24,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.7965,
+      "ml_score": 1,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600666",
+      "name": "奥瑞德",
+      "rank": 2,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -19,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "布林带下轨附近，支撑位",
+        "MACD死叉区域",
+        "模型预测上涨概率83%"
+      ],
+      "risks": [
+        "换手率43.0%，极度活跃",
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -15,
+          "reason": "换手率43.0%，极度活跃"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 5,
+          "reason": "布林带下轨附近，支撑位"
+        },
+        {
+          "name": "ML模型",
+          "score": 1,
+          "reason": "模型预测上涨概率83%"
+        }
+      ],
+      "price": 6.08,
+      "change_pct": 9.95,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.8257,
+      "ml_score": 1,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002361",
+      "name": "神剑股份",
+      "rank": 3,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -19,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "布林带下轨附近，支撑位",
+        "MACD死叉区域",
+        "模型预测上涨概率82%"
+      ],
+      "risks": [
+        "换手率33.1%，极度活跃",
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -15,
+          "reason": "换手率33.1%，极度活跃"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 5,
+          "reason": "布林带下轨附近，支撑位"
+        },
+        {
+          "name": "ML模型",
+          "score": 1,
+          "reason": "模型预测上涨概率82%"
+        }
+      ],
+      "price": 13.64,
+      "change_pct": 10.0,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.8203,
+      "ml_score": 1,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "000767",
+      "name": "晋控电力",
+      "rank": 6,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -19,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率75%"
+      ],
+      "risks": [
+        "换手率17.3%，活跃度高",
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -10,
+          "reason": "换手率17.3%，活跃度高"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 1,
+          "reason": "模型预测上涨概率75%"
+        }
+      ],
+      "price": 5.09,
+      "change_pct": 9.94,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.7451,
+      "ml_score": 1,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002192",
+      "name": "融捷股份",
+      "rank": 10,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -19,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率76%"
+      ],
+      "risks": [
+        "换手率16.3%，活跃度高",
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -10,
+          "reason": "换手率16.3%，活跃度高"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 1,
+          "reason": "模型预测上涨概率76%"
+        }
+      ],
+      "price": 78.0,
+      "change_pct": 10.0,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.7569,
+      "ml_score": 1,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002263",
+      "name": "大东南",
+      "rank": 29,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -20,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率65%"
+      ],
+      "risks": [
+        "换手率16.0%，活跃度高",
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -10,
+          "reason": "换手率16.0%，活跃度高"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率65%"
+        }
+      ],
+      "price": 4.07,
+      "change_pct": 10.0,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6505,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "002445",
+      "name": "中南文化",
+      "rank": 30,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -20,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率63%"
+      ],
+      "risks": [
+        "换手率19.7%，活跃度高",
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -10,
+          "reason": "换手率19.7%，活跃度高"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率63%"
+        }
+      ],
+      "price": 4.44,
+      "change_pct": 9.9,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6304,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "300054",
+      "name": "鼎龙股份",
+      "rank": 33,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -20,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率65%"
+      ],
+      "risks": [
+        "换手率15.9%，活跃度高",
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -10,
+          "reason": "换手率15.9%，活跃度高"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率65%"
+        }
+      ],
+      "price": 53.07,
+      "change_pct": 17.33,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6505,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "000890",
+      "name": "法尔胜",
+      "rank": 50,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -20,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率63%"
+      ],
+      "risks": [
+        "换手率15.8%，活跃度高",
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -10,
+          "reason": "换手率15.8%，活跃度高"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率63%"
+        }
+      ],
+      "price": 13.48,
+      "change_pct": 10.04,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6336,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "605299",
+      "name": "舒华体育",
+      "rank": 52,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -20,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率63%"
+      ],
+      "risks": [
+        "换手率15.2%，活跃度高",
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -10,
+          "reason": "换手率15.2%，活跃度高"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率63%"
+        }
+      ],
+      "price": 19.25,
+      "change_pct": 10.0,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6336,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600470",
+      "name": "六国化工",
+      "rank": 82,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -20,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率61%"
+      ],
+      "risks": [
+        "换手率15.9%，活跃度高",
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -10,
+          "reason": "换手率15.9%，活跃度高"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率61%"
+        }
+      ],
+      "price": 7.43,
+      "change_pct": 10.07,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.611,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600227",
+      "name": "赤天化",
+      "rank": 25,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -24,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率75%"
+      ],
+      "risks": [
+        "换手率25.1%，极度活跃",
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -15,
+          "reason": "换手率25.1%，极度活跃"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 1,
+          "reason": "模型预测上涨概率75%"
+        }
+      ],
+      "price": 4.27,
+      "change_pct": 10.05,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.7467,
+      "ml_score": 1,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "301292",
+      "name": "海科新源",
+      "rank": 38,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -24,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率80%"
+      ],
+      "risks": [
+        "换手率36.2%，极度活跃",
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -15,
+          "reason": "换手率36.2%，极度活跃"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 1,
+          "reason": "模型预测上涨概率80%"
+        }
+      ],
+      "price": 96.29,
+      "change_pct": 20.0,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.8039,
+      "ml_score": 1,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    },
+    {
+      "code": "600982",
+      "name": "宁波能源",
+      "rank": 28,
+      "signal": "Risk",
+      "strength": 1,
+      "score": -25,
+      "reasons": [
+        "乖离: 接近涨停，追高风险",
+        "模型预测上涨概率66%"
+      ],
+      "risks": [
+        "换手率20.3%，极度活跃",
+        "短期涨幅较大，注意追高风险"
+      ],
+      "factors": [
+        {
+          "name": "人气趋势",
+          "score": 0,
+          "reason": "排名稳定"
+        },
+        {
+          "name": "量价配合",
+          "score": 0,
+          "reason": "量价正常"
+        },
+        {
+          "name": "换手率风险",
+          "score": -15,
+          "reason": "换手率20.3%，极度活跃"
+        },
+        {
+          "name": "乖离率",
+          "score": -10,
+          "reason": "接近涨停，追高风险"
+        },
+        {
+          "name": "板块效应",
+          "score": 0,
+          "reason": "板块正常"
+        },
+        {
+          "name": "估值风险",
+          "score": 0,
+          "reason": "估值正常"
+        },
+        {
+          "name": "技术指标",
+          "score": 0,
+          "reason": "技术中性"
+        },
+        {
+          "name": "ML模型",
+          "score": 0,
+          "reason": "模型预测上涨概率66%"
+        }
+      ],
+      "price": 7.35,
+      "change_pct": 10.03,
+      "signal_time": "2026-03-27 16:24:44",
+      "up_proba": 0.6595,
+      "ml_score": 0,
+      "has_ml": true,
+      "suggestion": "建议回避，风险信号明显，不宜参与",
+      "in_portfolio": false,
+      "holding_info": null,
+      "sell_alert": false
+    }
+  ]
+}

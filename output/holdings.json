@@ -1,0 +1,34 @@
+{
+  "holdings": [
+    {
+      "code": "601016",
+      "name": "节能风电",
+      "buy_price": 5.4,
+      "quantity": 1000,
+      "buy_date": "2026-03-24",
+      "sellable_date": "2026-03-26",
+      "buy_time": "2026-03-25 16:26:31"
+    },
+    {
+      "code": "002079",
+      "name": "苏州固锝",
+      "buy_price": 16.65,
+      "quantity": 2400,
+      "buy_date": "2026-03-26",
+      "sellable_date": "2026-03-27",
+      "buy_time": "2026-03-26 09:52:05",
+      "custom": true
+    },
+    {
+      "code": "300131",
+      "name": "英唐智控",
+      "buy_price": 11.57,
+      "quantity": 2000,
+      "buy_date": "2026-03-26",
+      "sellable_date": "2026-03-27",
+      "buy_time": "2026-03-26 10:44:29",
+      "custom": true
+    }
+  ],
+  "cash": 94600.0
+}
