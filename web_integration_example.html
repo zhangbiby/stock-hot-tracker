@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人气100个股 - MLSC智能信号</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #1a1a2e; color: #eee; padding: 20px; }
+        
+        .container { max-width: 1400px; margin: 0 auto; }
+        h1 { text-align: center; color: #4fc3f7; margin-bottom: 10px; font-size: 1.8em; }
+        .subtitle { text-align: center; color: #888; margin-bottom: 20px; }
+        
+        .header { display: flex; justify-content: space-between; align-items: center; background: #16213e; padding: 15px 20px; border-radius: 10px; margin-bottom: 20px; }
+        .market-info { display: flex; gap: 30px; flex-wrap: wrap; }
+        .market-item { text-align: center; }
+        .market-label { color: #888; font-size: 0.85em; }
+        .market-value { font-size: 1.2em; font-weight: bold; }
+        .market-value.up { color: #f44336; }
+        .market-value.down { color: #4caf50; }
+        
+        /* 指数行情条 */
+        .indices-bar { display: flex; gap: 15px; margin-bottom: 15px; flex-wrap: wrap; }
+        .index-item { background: #16213e; padding: 10px 20px; border-radius: 8px; min-width: 160px; }
+        .index-item .name { font-size: 0.85em; color: #888; margin-bottom: 3px; }
+        .index-item .price { font-size: 1.1em; font-weight: bold; color: #fff; }
+        .index-item .change { font-size: 0.9em; font-weight: bold; }
+        .index-item .change.up { color: #f44336; }
+        .index-item .change.down { color: #4caf50; }
+        
+        .connection { display: flex; align-items: center; gap: 8px; }
+        .dot { width: 10px; height: 10px; border-radius: 50%; background: #666; }
+        .dot.connected { background: #4caf50; }
+        
+        .tabs { display: flex; gap: 10px; margin-bottom: 15px; }
+        .tab { padding: 10px 20px; background: #16213e; border: none; border-radius: 6px; color: #888; cursor: pointer; }
+        .tab.active { background: #4fc3f7; color: #1a1a2e; font-weight: bold; }
+        
+        .table-container { background: #16213e; border-radius: 12px; overflow: hidden; }
+        table { width: 100%; border-collapse: collapse; }
+        th { background: #0f3460; padding: 12px 8px; text-align: left; font-weight: 600; color: #4fc3f7; font-size: 0.9em; position: sticky; top: 0; }
+        td { padding: 10px 8px; border-bottom: 1px solid #1a1a2e; font-size: 0.9em; }
+        tr:hover { background: #1f2a4a; }
+        tr:nth-child(even) { background: rgba(22, 33, 62, 0.5); }
+        
+        .rank { font-weight: bold; color: #ff9800; min-width: 40px; }
+        .rank.top3 { color: #ffd700; font-size: 1.1em; }
+        .code { color: #4fc3f7; font-weight: 600; }
+        .name { color: #ccc; }
+        .price { font-weight: 600; min-width: 70px; }
+        .change { font-weight: bold; min-width: 70px; }
+        .change.up { color: #f44336; }
+        .change.down { color: #4caf50; }
+        .turnover { color: #888; min-width: 60px; }
+        
+        /* MLSC信号 */
+        .mlsc-cell { display: flex; gap: 6px; }
+        .signal-badge { padding: 3px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; min-width: 50px; text-align: center; }
+        .signal-badge.bullish { background: rgba(76, 175, 80, 0.3); color: #4caf50; border: 1px solid #4caf50; }
+        .signal-badge.bearish { background: rgba(244, 67, 54, 0.3); color: #f44336; border: 1px solid #f44336; }
+        .signal-badge.neutral { background: rgba(158, 158, 158, 0.3); color: #9e9e9e; border: 1px solid #9e9e9e; }
+        
+        .confidence { min-width: 60px; }
+        .confidence-bar { width: 50px; height: 6px; background: #333; border-radius: 3px; overflow: hidden; }
+        .confidence-fill { height: 100%; border-radius: 3px; }
+        .confidence-fill.high { background: #4caf50; }
+        .confidence-fill.medium { background: #ff9800; }
+        .confidence-fill.low { background: #f44336; }
+        
+        .final-signal { font-weight: bold; min-width: 70px; }
+        
+        /* 卡片视图 */
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 15px; }
+        .stock-card { background: #16213e; border-radius: 12px; padding: 15px; position: relative; overflow: hidden; }
+        .stock-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+        .stock-card.bullish::before { background: #4caf50; }
+        .stock-card.bearish::before { background: #f44336; }
+        .stock-card.neutral::before { background: #9e9e9e; }
+        
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+        .card-rank { font-size: 2em; font-weight: bold; color: #ff9800; line-height: 1; }
+        .card-info { flex: 1; margin-left: 10px; }
+        .card-code { color: #4fc3f7; font-weight: 600; }
+        .card-name { color: #888; font-size: 0.9em; }
+        .card-price { font-size: 1.3em; font-weight: bold; margin: 5px 0; }
+        .card-change { font-weight: bold; }
+        .card-change.up { color: #f44336; }
+        .card-change.down { color: #4caf50; }
+        
+        .card-horizons { display: flex; gap: 8px; margin: 10px 0; }
+        .horizon { background: #0f3460; padding: 6px 10px; border-radius: 6px; text-align: center; flex: 1; }
+        .horizon-label { font-size: 0.75em; color: #888; }
+        .horizon-value { font-weight: bold; font-size: 0.9em; }
+        
+        .card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; }
+        .card-confidence { font-size: 0.85em; color: #888; }
+        .final-badge { padding: 4px 12px; border-radius: 4px; font-weight: bold; }
+        .final-badge.bullish { background: #4caf50; }
+        .final-badge.bearish { background: #f44336; }
+        .final-badge.neutral { background: #9e9e9e; }
+        
+        .loading { text-align: center; padding: 50px; color: #888; }
+        .error { text-align: center; padding: 20px; color: #f44336; }
+        
+        .refresh-btn { padding: 8px 16px; background: #4fc3f7; color: #1a1a2e; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
+        .refresh-btn:hover { background: #29b6f6; }
+        
+        /* 筛选器 */
+        .filters { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
+        .filter-btn { padding: 6px 12px; background: #16213e; border: 1px solid #333; border-radius: 4px; color: #888; cursor: pointer; font-size: 0.85em; }
+        .filter-btn.active { background: #4fc3f7; color: #1a1a2e; border-color: #4fc3f7; }
+        .filter-btn:hover { border-color: #4fc3f7; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>人气100个股 - MLSC智能信号</h1>
+        <p class="subtitle">多周期预测 | 1天 / 3天 / 5天</p>
+        
+        <!-- 指数行情条 -->
+        <div class="indices-bar" id="indicesBar">
+            <div class="index-item">
+                <div class="name">上证指数</div>
+                <div class="price" id="shIndexPrice">--</div>
+                <div class="change" id="shIndexChange">--</div>
+            </div>
+            <div class="index-item">
+                <div class="name">深证成指</div>
+                <div class="price" id="szIndexPrice">--</div>
+                <div class="change" id="szIndexChange">--</div>
+            </div>
+            <div class="index-item">
+                <div class="name">创业板指</div>
+                <div class="price" id="cyIndexPrice">--</div>
+                <div class="change" id="cyIndexChange">--</div>
+            </div>
+            <div class="index-item">
+                <div class="name">科创50</div>
+                <div class="price" id="kcIndexPrice">--</div>
+                <div class="change" id="kcIndexChange">--</div>
+            </div>
+        </div>
+        
+        <!-- 头部信息 -->
+        <div class="header">
+            <div class="market-info">
+                <div class="market-item">
+                    <div class="market-label">恐慌贪婪</div>
+                    <div class="market-value" id="fearGreed">--</div>
+                </div>
+                <div class="market-item">
+                    <div class="market-label">上涨/下跌</div>
+                    <div class="market-value" id="upDown">--/--</div>
+                </div>
+            </div>
+            <div class="connection">
+                <div class="dot" id="connectionDot"></div>
+                <span id="connectionStatus">连接中...</span>
+            </div>
+            <button class="refresh-btn" onclick="loadData()">刷新数据</button>
+        </div>
+        
+        <!-- 视图切换 -->
+        <div class="tabs">
+            <button class="tab active" onclick="showView('table')">表格视图</button>
+            <button class="tab" onclick="showView('cards')">卡片视图</button>
+        </div>
+        
+        <!-- 筛选器 -->
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterSignal('all')">全部</button>
+            <button class="filter-btn" onclick="filterSignal('bullish')">只看多头</button>
+            <button class="filter-btn" onclick="filterSignal('bearish')">只看空头</button>
+            <button class="filter-btn" onclick="filterSignal('neutral')">中性</button>
+        </div>
+        
+        <!-- 表格视图 -->
+        <div id="tableView" class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>排名</th>
+                        <th>代码</th>
+                        <th>名称</th>
+                        <th>现价</th>
+                        <th>涨跌幅</th>
+                        <th>换手率</th>
+                        <th>1天信号</th>
+                        <th>3天信号</th>
+                        <th>5天信号</th>
+                        <th>置信度</th>
+                        <th>综合信号</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr><td colspan="11" class="loading">加载中...</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- 卡片视图 -->
+        <div id="cardsView" class="cards-grid" style="display:none;">
+            <div class="loading">加载中...</div>
+        </div>
+    </div>
+    
+    <script>
+        // 配置
+        const API_URL = 'http://localhost:8080';
+        
+        // 全局数据
+        let allStocks = [];
+        let currentFilter = 'all';
+        
+        // 加载数据
+        async function loadData() {
+            try {
+                // 获取市场状态
+                fetchMarketStatus();
+                
+                // 获取MLSC信号
+                const resp = await fetch(`${API_URL}/api/mlsc`);
+                const data = await resp.json();
+                
+                if (data.success && data.stocks) {
+                    allStocks = data.stocks;
+                    renderTable(allStocks);
+                    renderCards(allStocks);
+                    document.getElementById('connectionDot').classList.add('connected');
+                    document.getElementById('connectionStatus').textContent = '已连接';
+                } else {
+                    showError('数据加载失败');
+                }
+            } catch (e) {
+                console.error('加载失败:', e);
+                // 使用演示数据
+                loadDemoData();
+            }
+        }
+        
+        // 加载演示数据
+        function loadDemoData() {
+            document.getElementById('connectionStatus').textContent = '演示模式';
+            document.getElementById('connectionDot').classList.add('connected');
+            
+            // 生成演示数据
+            allStocks = [
+                {rank: 1, code: '300058', name: '蓝色光标', price: 16.31, change_pct: 20.01, turnover_rate: 16.79, final_signal: 'bullish', mlsc: {1: 'bullish', 3: 'bullish', 5: 'neutral', confidence: 0.82}},
+                {rank: 2, code: '002131', name: '利欧股份', price: 7.95, change_pct: 9.96, turnover_rate: 8.23, final_signal: 'bullish', mlsc: {1: 'bullish', 3: 'bullish', 5: 'bullish', confidence: 0.75}},
+                {rank: 3, code: '603459', name: 'N红板', price: 57.7, change_pct: 225.99, turnover_rate: 81.06, final_signal: 'bullish', mlsc: {1: 'bullish', 3: 'neutral', 5: 'bearish', confidence: 0.68}},
+                {rank: 4, code: '300475', name: '香农芯创', price: 148.18, change_pct: 20.0, turnover_rate: 13.4, final_signal: 'bullish', mlsc: {1: 'bullish', 3: 'bullish', 5: 'neutral', confidence: 0.80}},
+                {rank: 5, code: '600666', name: '奥瑞德', price: 6.5, change_pct: 9.98, turnover_rate: 5.2, final_signal: 'bullish', mlsc: {1: 'bullish', 3: 'neutral', 5: 'neutral', confidence: 0.65}},
+                {rank: 6, code: '002505', name: '大康农业', price: 3.21, change_pct: 8.07, turnover_rate: 12.5, final_signal: 'bullish', mlsc: {1: 'bullish', 3: 'bullish', 5: 'neutral', confidence: 0.72}},
+                {rank: 7, code: '000506', name: '中国健康', price: 2.85, change_pct: 10.04, turnover_rate: 8.1, final_signal: 'bullish', mlsc: {1: 'bullish', 3: 'neutral', 5: 'bearish', confidence: 0.60}},
+                {rank: 8, code: '002463', name: '沪电股份', price: 28.5, change_pct: -3.2, turnover_rate: 4.5, final_signal: 'bearish', mlsc: {1: 'bearish', 3: 'bearish', 5: 'neutral', confidence: 0.70}},
+                {rank: 9, code: '300059', name: '东方财富', price: 18.9, change_pct: 1.5, turnover_rate: 3.2, final_signal: 'neutral', mlsc: {1: 'neutral', 3: 'bullish', 5: 'bullish', confidence: 0.55}},
+                {rank: 10, code: '600519', name: '贵州茅台', price: 1680, change_pct: -0.8, turnover_rate: 0.3, final_signal: 'neutral', mlsc: {1: 'neutral', 3: 'neutral', 5: 'bullish', confidence: 0.52}},
+            ];
+            
+            renderTable(allStocks);
+            renderCards(allStocks);
+            updateMarketDemo();
+        }
+        
+        // 获取市场状态
+        async function fetchMarketStatus() {
+            try {
+                const resp = await fetch(`${API_URL}/api/market_status`);
+                const data = await resp.json();
+                if (data.success) {
+                    updateMarketStatus(data);
+                }
+            } catch (e) {
+                updateMarketDemo();
+            }
+        }
+        
+        function updateMarketStatus(data) {
+            // 显示真实的上证指数数据
+            if (data.indices && data.indices.length > 0) {
+                data.indices.forEach(idx => {
+                    const priceId = getIndexPriceId(idx.name);
+                    const changeId = getIndexChangeId(idx.name);
+                    if (priceId) {
+                        const priceEl = document.getElementById(priceId);
+                        if (priceEl) {
+                            priceEl.textContent = idx.price.toFixed(2);
+                            priceEl.className = idx.change_pct >= 0 ? 'price up' : 'price down';
+                        }
+                    }
+                    if (changeId) {
+                        const changeEl = document.getElementById(changeId);
+                        if (changeEl) {
+                            changeEl.textContent = (idx.change_pct >= 0 ? '+' : '') + idx.change_pct.toFixed(2) + '%';
+                            changeEl.className = 'change ' + (idx.change_pct >= 0 ? 'up' : 'down');
+                        }
+                    }
+                });
+            } else {
+                // 备用显示
+                document.getElementById('shIndexPrice').textContent = '--';
+                document.getElementById('shIndexChange').textContent = (data.change >= 0 ? '+' : '') + data.change.toFixed(2) + '%';
+                document.getElementById('shIndexChange').className = 'change ' + (data.change >= 0 ? 'up' : 'down');
+            }
+            document.getElementById('fearGreed').textContent = data.fear_greed || '--';
+            document.getElementById('upDown').textContent = `${data.up_count || '--'}/${data.down_count || '--'}`;
+        }
+        
+        function getIndexPriceId(name) {
+            const map = {
+                '上证指数': 'shIndexPrice', 
+                '深证成指': 'szIndexPrice',
+                '创业板指': 'cyIndexPrice', 
+                '科创50': 'kcIndexPrice'
+            };
+            return map[name] || null;
+        }
+        
+        function getIndexChangeId(name) {
+            const map = {
+                '上证指数': 'shIndexChange', 
+                '深证成指': 'szIndexChange',
+                '创业板指': 'cyIndexChange', 
+                '科创50': 'kcIndexChange'
+            };
+            return map[name] || null;
+        }
+        
+        function updateMarketDemo() {
+            const change = (Math.random() - 0.5) * 4;
+            document.getElementById('indexChange').textContent = (change >= 0 ? '+' : '') + change.toFixed(2) + '%';
+            document.getElementById('indexChange').className = 'market-value ' + (change >= 0 ? 'up' : 'down');
+            document.getElementById('fearGreed').textContent = Math.floor(40 + Math.random() * 40);
+            document.getElementById('upDown').textContent = `${Math.floor(1500 + Math.random() * 1000)}/${Math.floor(1000 + Math.random() * 1000)}`;
+        }
+        
+        // 渲染表格
+        function renderTable(stocks) {
+            const tbody = document.getElementById('tableBody');
+            let filtered = stocks;
+            
+            if (currentFilter !== 'all') {
+                filtered = stocks.filter(s => s.final_signal === currentFilter);
+            }
+            
+            if (filtered.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="11" class="loading">暂无数据</td></tr>';
+                return;
+            }
+            
+            tbody.innerHTML = filtered.slice(0, 100).map(stock => {
+                const changeClass = stock.change_pct >= 0 ? 'up' : 'down';
+                const changeSign = stock.change_pct >= 0 ? '+' : '';
+                const mlsc = stock.mlsc || {1: 'neutral', 3: 'neutral', 5: 'neutral', confidence: 0.5};
+                const confLevel = mlsc.confidence > 0.7 ? 'high' : mlsc.confidence > 0.4 ? 'medium' : 'low';
+                
+                return `
+                    <tr>
+                        <td><span class="rank ${stock.rank <= 3 ? 'top3' : ''}">${stock.rank}</span></td>
+                        <td class="code">${stock.code}</td>
+                        <td class="name">${stock.name || '-'}</td>
+                        <td class="price">${stock.price ? stock.price.toFixed(2) : '-'}</td>
+                        <td class="change ${changeClass}">${changeSign}${stock.change_pct ? stock.change_pct.toFixed(2) : '0.00'}%</td>
+                        <td class="turnover">${stock.turnover_rate ? stock.turnover_rate.toFixed(1) + '%' : '-'}</td>
+                        <td><span class="signal-badge ${mlsc['1d'] || 'neutral'}">${getSignalText(mlsc['1d'])}</span></td>
+                        <td><span class="signal-badge ${mlsc['3d'] || 'neutral'}">${getSignalText(mlsc['3d'])}</span></td>
+                        <td><span class="signal-badge ${mlsc['5d'] || 'neutral'}">${getSignalText(mlsc['5d'])}</span></td>
+                        <td class="confidence">
+                            <div class="confidence-bar">
+                                <div class="confidence-fill ${confLevel}" style="width: ${(mlsc.confidence || 0.5) * 100}%"></div>
+                            </div>
+                        </td>
+                        <td><span class="signal-badge ${stock.final_signal || 'neutral'}">${getSignalText(stock.final_signal)}</span></td>
+                    </tr>
+                `;
+            }).join('');
+        }
+        
+        // 渲染卡片
+        function renderCards(stocks) {
+            const container = document.getElementById('cardsView');
+            let filtered = stocks;
+            
+            if (currentFilter !== 'all') {
+                filtered = stocks.filter(s => s.final_signal === currentFilter);
+            }
+            
+            if (filtered.length === 0) {
+                container.innerHTML = '<div class="loading">暂无数据</div>';
+                return;
+            }
+            
+            container.innerHTML = filtered.slice(0, 20).map(stock => {
+                const changeClass = stock.change_pct >= 0 ? 'up' : 'down';
+                const changeSign = stock.change_pct >= 0 ? '+' : '';
+                const mlsc = stock.mlsc || {1: 'neutral', 3: 'neutral', 5: 'neutral', confidence: 0.5};
+                
+                return `
+                    <div class="stock-card ${stock.final_signal || 'neutral'}">
+                        <div class="card-header">
+                            <div class="card-rank">${stock.rank}</div>
+                            <div class="card-info">
+                                <div class="card-code">${stock.code}</div>
+                                <div class="card-name">${stock.name || '-'}</div>
+                            </div>
+                        </div>
+                        <div class="card-price">${stock.price ? '¥' + stock.price.toFixed(2) : '-'}</div>
+                        <div class="card-change ${changeClass}">${changeSign}${stock.change_pct ? stock.change_pct.toFixed(2) : '0.00'}%</div>
+                        <div class="card-horizons">
+                            <div class="horizon">
+                                <div class="horizon-label">1天</div>
+                                <div class="horizon-value">${getSignalText(mlsc['1d'])}</div>
+                            </div>
+                            <div class="horizon">
+                                <div class="horizon-label">3天</div>
+                                <div class="horizon-value">${getSignalText(mlsc['3d'])}</div>
+                            </div>
+                            <div class="horizon">
+                                <div class="horizon-label">5天</div>
+                                <div class="horizon-value">${getSignalText(mlsc['5d'])}</div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-confidence">置信度: ${((mlsc.confidence || 0.5) * 100).toFixed(0)}%</div>
+                            <span class="final-badge ${stock.final_signal || 'neutral'}">${getSignalText(stock.final_signal)}</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        // 信号文本
+        function getSignalText(signal) {
+            const map = {bullish: '多头', bearish: '空头', neutral: '中性'};
+            return map[signal] || signal || '-';
+        }
+        
+        // 切换视图
+        function showView(view) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelector(`.tab[onclick="showView('${view}')"]`).classList.add('active');
+            
+            document.getElementById('tableView').style.display = view === 'table' ? 'block' : 'none';
+            document.getElementById('cardsView').style.display = view === 'cards' ? 'grid' : 'none';
+        }
+        
+        // 筛选信号
+        function filterSignal(filter) {
+            currentFilter = filter;
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            document.querySelector(`.filter-btn[onclick="filterSignal('${filter}')"]`).classList.add('active');
+            renderTable(allStocks);
+            renderCards(allStocks);
+        }
+        
+        // 显示错误
+        function showError(msg) {
+            document.getElementById('tableBody').innerHTML = `<tr><td colspan="11" class="error">${msg}</td></tr>`;
+        }
+        
+        // 启动
+        window.onload = loadData;
+        
+        // 每30秒自动刷新
+        setInterval(loadData, 30000);
+    </script>
+</body>
+</html>
